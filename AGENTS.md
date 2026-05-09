@@ -118,6 +118,12 @@ perfect-world-helper/
 │  │  ├─ app.store.js
 │  │  ├─ filters.store.js
 │  │  └─ calculator.store.js
+│  ├─ i18n/
+│  │  ├─ index.js
+│  │  └─ locales/
+│  │     ├─ pt-BR.json
+│  │     ├─ en-US.json
+│  │     └─ es-ES.json
 │  ├─ workers/
 │  │  ├─ data.worker.js
 │  │  ├─ worker-client.js
@@ -135,7 +141,9 @@ perfect-world-helper/
 │  │  ├─ format.js
 │  │  └─ normalize.js
 │  ├─ styles/
-│  │  └─ main.css
+│  │  ├─ main.css
+│  │  ├─ themes.css
+│  │  └─ style-presets.js
 │  └─ main.js
 ├─ tests/
 │  ├─ calculators/
@@ -507,6 +515,86 @@ Recommended visual direction:
 
 ---
 
+## Style Preset Rules
+
+The app must be easy to restyle.
+
+There will be a style dropdown later, so visual themes must be implemented as selectable style presets.
+
+Use a stable style preset ID such as:
+
+```txt
+dark
+arcane
+classic
+high-contrast
+```
+
+The default style preset is `dark`.
+
+Store the selected preset in UI state and local preferences.
+
+Apply the active preset to the document root:
+
+```js
+document.documentElement.dataset.stylePreset = selectedPreset;
+```
+
+Prefer semantic CSS variables for colors, surfaces, borders, shadows, and focus rings:
+
+```css
+:root,
+[data-style-preset="dark"] {
+  --color-page: #080b12;
+  --color-surface: #111827;
+  --color-text: #f8fafc;
+  --color-muted: #94a3b8;
+  --color-accent: #38bdf8;
+  --color-border: #263244;
+}
+
+[data-style-preset="arcane"] {
+  --color-page: #100a18;
+  --color-surface: #1a1026;
+  --color-text: #faf5ff;
+  --color-muted: #c4b5fd;
+  --color-accent: #f0abfc;
+  --color-border: #3b2557;
+}
+```
+
+Components should use semantic tokens instead of hardcoded palette choices whenever possible.
+
+Prefer this:
+
+```html
+<section class="bg-[var(--color-surface)] text-[var(--color-text)] border border-[var(--color-border)]">
+```
+
+Avoid this:
+
+```html
+<section class="bg-slate-900 text-slate-100 border-slate-700">
+```
+
+Keep layout, spacing, and component behavior stable across style presets.
+
+Changing style must not change routing, worker data, calculations, filters, or translation logic.
+
+The future style dropdown must use a real `<select>` or accessible menu button and must be keyboard accessible.
+
+Style preset labels shown in the dropdown must come from the translation layer.
+
+Do not duplicate whole components just to create a new visual style.
+
+Add a new style preset by updating:
+
+- `src/styles/themes.css`
+- `src/styles/style-presets.js`
+- Translation keys for the visible preset label
+
+---
+
 ## Accessibility Rules
 
 All interactive elements must be keyboard accessible.
@@ -525,6 +613,141 @@ Do not remove focus styles.
 Do not rely on color alone to convey meaning.
 
 Tables must use proper `thead`, `tbody`, `th`, and `td`.
+
+---
+
+## Translation Rules
+
+Code names must be written in English.
+
+Visible game UI text must default to Brazilian Portuguese (`pt-BR`).
+
+Use these libraries for app translation:
+
+```txt
+i18next
+i18next-browser-languagedetector
+```
+
+Install them as runtime dependencies:
+
+```bash
+npm install i18next i18next-browser-languagedetector
+```
+
+Use native `Intl` APIs for number, currency, and date formatting:
+
+```js
+new Intl.NumberFormat("pt-BR").format(1500000);
+new Intl.DateTimeFormat("pt-BR").format(new Date());
+```
+
+Do not add a separate formatting library for the MVP.
+
+All user-facing strings must be translation-ready:
+
+- Page titles.
+- Navigation labels.
+- Buttons.
+- Form labels.
+- Placeholders.
+- Empty states.
+- Error messages.
+- Calculator result labels.
+- Filter labels.
+- Table headings.
+- Accessibility labels.
+- Meta descriptions.
+
+Do not hardcode visible strings inside components when they can come from the translation layer.
+
+Use stable English translation keys:
+
+```js
+t("nav.dusk")
+t("filters.equipmentType")
+t("calculator.missingMaterials")
+```
+
+Keep translation values in locale files such as:
+
+```txt
+src/i18n/locales/pt-BR.json
+src/i18n/locales/en-US.json
+src/i18n/locales/es-ES.json
+```
+
+The default locale is `pt-BR`.
+
+Recommended `src/i18n/index.js` shape:
+
+```js
+import i18next from "i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import ptBR from "./locales/pt-BR.json";
+import enUS from "./locales/en-US.json";
+import esES from "./locales/es-ES.json";
+
+await i18next.use(LanguageDetector).init({
+  fallbackLng: "pt-BR",
+  supportedLngs: ["pt-BR", "en-US", "es-ES"],
+  resources: {
+    "pt-BR": { translation: ptBR },
+    "en-US": { translation: enUS },
+    "es-ES": { translation: esES }
+  }
+});
+
+export const t = i18next.t;
+export const i18n = i18next;
+```
+
+Example locale file:
+
+```json
+{
+  "nav.dusk": "Drops Dusk",
+  "nav.equipments": "Equipamentos",
+  "nav.divineBooks": "Livros Divinos",
+  "nav.stones": "Pedras",
+  "search.placeholder": "Buscar item, boss ou equipamento"
+}
+```
+
+Usage with LiteDom:
+
+```js
+import { t } from "../i18n/index.js";
+
+component("#app", () => `
+  <nav>
+    <a href="#/dusk">${t("nav.dusk")}</a>
+    <a href="#/equipments">${t("nav.equipments")}</a>
+  </nav>
+`);
+```
+
+The app should be able to receive additional translations without changing component logic.
+
+Prefer this:
+
+```js
+buttonLabel: t("actions.search")
+```
+
+Avoid this:
+
+```js
+buttonLabel: "Buscar"
+```
+
+Game data names may stay in the source language used by the data file, but UI labels around them must use the translation layer.
+
+When adding a new page, component, filter, calculation, or error state, add or update the corresponding translation keys.
+
+Avoid `typesafe-i18n`, because it adds a typed translation workflow that does not fit this project.
+
+Avoid Lingui, FormatJS, and `intl-messageformat` for the MVP unless plural, gender, or ICU MessageFormat support becomes a real product requirement.
 
 ---
 
@@ -653,7 +876,9 @@ Avoid mixing UI, data, and calculations in the same module.
 
 Use English for code names.
 
-Accept Portuguese for visible UI labels if the target audience is Brazilian.
+Use English for file names, variable names, function names, IDs, translation keys, and internal constants.
+
+Use Brazilian Portuguese only in translation values for the default `pt-BR` locale and other visible content intended for players.
 
 Examples:
 
