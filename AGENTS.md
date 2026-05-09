@@ -503,6 +503,31 @@ Use responsive layouts.
 
 The UI must work on mobile first.
 
+Use Lucide icons for interface icons.
+
+Install icons from the `lucide` package and prefer individual icon imports so Vite does not traverse the entire icon barrel:
+
+```js
+import Search from "lucide/dist/esm/icons/search.mjs";
+import X from "lucide/dist/esm/icons/x.mjs";
+```
+
+When rendering icons from LiteDom string components, use the shared UI icon renderer instead of inline SVG strings or text symbols:
+
+```js
+import { Icon } from "./components/ui/Icon.js";
+
+Icon({ icon: Search })
+```
+
+Prefer Lucide icons inside icon buttons, select chevrons, selected-state checks, dropdown actions, tabs, toggles, and modal close buttons whenever an icon exists.
+
+Avoid:
+
+- Text symbols for UI icons such as `✓`, `×`, `⌕`, `≡`, arrows, or chevrons.
+- Hand-written SVG icons inside components.
+- Duplicating the same SVG markup across components.
+
 Recommended visual direction:
 
 - Dark theme by default.

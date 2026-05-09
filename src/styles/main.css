@@ -259,6 +259,23 @@ svg {
   color: var(--app-color-text-muted);
 }
 
+.app-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  padding: 0;
+  margin: -1px;
+}
+
+.app-icon {
+  flex: none;
+  pointer-events: none;
+}
+
 .app-button {
   display: inline-flex;
   min-height: 2.5rem;
@@ -453,16 +470,16 @@ svg {
 }
 
 .app-select__chevron {
-  width: 0.55rem;
-  height: 0.55rem;
-  border-bottom: 2px solid var(--app-color-text-muted);
-  border-right: 2px solid var(--app-color-text-muted);
-  transform: rotate(45deg) translateY(-0.1rem);
+  color: var(--app-color-text-muted);
   transition: transform 160ms ease;
 }
 
-.app-select--open .app-select__chevron {
-  transform: rotate(225deg) translateY(-0.1rem);
+.app-select__chevron .app-icon {
+  transition: transform 160ms ease;
+}
+
+.app-select--open .app-select__chevron .app-icon {
+  transform: rotate(180deg);
 }
 
 .app-select__listbox {
@@ -503,8 +520,8 @@ svg {
 }
 
 .app-select__check {
+  display: inline-flex;
   color: var(--app-color-accent);
-  font-weight: 900;
 }
 
 .app-toggle {

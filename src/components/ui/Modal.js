@@ -1,3 +1,4 @@
+import X from "lucide/dist/esm/icons/x.mjs";
 import { escapeHtml } from "../../utils/escape-html.js";
 import { attributes, classNames, dataAttributes } from "../../utils/html.js";
 import { Button } from "./Button.js";
@@ -42,6 +43,8 @@ export function Modal({
             label: closeLabel,
             variant: "ghost",
             size: "sm",
+            icon: X,
+            showLabel: false,
             action: "closeModal",
             data: { modalId: id },
             attrs: { "aria-label": closeLabel }

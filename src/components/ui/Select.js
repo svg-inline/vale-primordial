@@ -1,5 +1,8 @@
+import Check from "lucide/dist/esm/icons/check.mjs";
+import ChevronDown from "lucide/dist/esm/icons/chevron-down.mjs";
 import { escapeHtml } from "../../utils/escape-html.js";
 import { attributes, classNames, dataAttributes } from "../../utils/html.js";
+import { Icon } from "./Icon.js";
 import { Field } from "./Input.js";
 
 export function Select({
@@ -51,7 +54,7 @@ export function Select({
           <span class="${selectedOption ? "app-select__value" : "app-select__placeholder"}">
             ${escapeHtml(selectedLabel || "")}
           </span>
-          <span class="app-select__chevron" aria-hidden="true"></span>
+          <span class="app-select__chevron">${Icon({ icon: ChevronDown })}</span>
         </button>
         <div id="${escapeHtml(listboxId)}" class="app-select__listbox" role="listbox" ${open ? "" : "hidden"}>
           ${options.map((option) => SelectOption({
@@ -79,7 +82,7 @@ export function SelectOption({ selectId, option, selected = false, action = "sel
       ${dataAttributes({ action, selectId, value: optionValue })}
     >
       <span>${escapeHtml(optionLabel)}</span>
-      ${selected ? '<span class="app-select__check" aria-hidden="true">✓</span>' : ""}
+      ${selected ? `<span class="app-select__check">${Icon({ icon: Check })}</span>` : ""}
     </button>
   `;
 }

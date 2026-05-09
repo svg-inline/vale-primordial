@@ -12,7 +12,11 @@
     "test:run": "vitest run",
     "lint:data": "node scripts/validate-data.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "i18next": "^26.0.10",
+    "i18next-browser-languagedetector": "^8.2.1",
+    "lucide": "^1.14.0"
+  },
   "devDependencies": {
     "@tailwindcss/vite": "^4.2.0",
     "tailwindcss": "^4.2.0",

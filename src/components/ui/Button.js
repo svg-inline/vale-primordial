@@ -1,5 +1,6 @@
 import { escapeHtml } from "../../utils/escape-html.js";
 import { attributes, classNames, dataAttributes } from "../../utils/html.js";
+import { Icon } from "./Icon.js";
 
 const variants = {
   primary: "app-button app-button--primary",
@@ -23,12 +24,13 @@ export function Button({
   disabled = false,
   icon = "",
   iconPosition = "start",
+  showLabel = true,
   className = "",
   data = {},
   attrs = {}
 } = {}) {
-  const safeIcon = icon ? `<span class="app-button__icon" aria-hidden="true">${escapeHtml(icon)}</span>` : "";
-  const safeLabel = `<span class="app-button__label">${escapeHtml(label)}</span>`;
+  const safeIcon = icon ? `<span class="app-button__icon">${Icon({ icon })}</span>` : "";
+  const safeLabel = `<span class="${showLabel ? "app-button__label" : "app-sr-only"}">${escapeHtml(label)}</span>`;
   const content = iconPosition === "end" ? `${safeLabel}${safeIcon}` : `${safeIcon}${safeLabel}`;
   const dataset = dataAttributes({ action, ...data });
 
@@ -51,12 +53,13 @@ export function LinkButton({
   current = false,
   icon = "",
   iconPosition = "start",
+  showLabel = true,
   className = "",
   data = {},
   attrs = {}
 } = {}) {
-  const safeIcon = icon ? `<span class="app-button__icon" aria-hidden="true">${escapeHtml(icon)}</span>` : "";
-  const safeLabel = `<span class="app-button__label">${escapeHtml(label)}</span>`;
+  const safeIcon = icon ? `<span class="app-button__icon">${Icon({ icon })}</span>` : "";
+  const safeLabel = `<span class="${showLabel ? "app-button__label" : "app-sr-only"}">${escapeHtml(label)}</span>`;
   const content = iconPosition === "end" ? `${safeLabel}${safeIcon}` : `${safeIcon}${safeLabel}`;
   const dataset = dataAttributes(data);
 
