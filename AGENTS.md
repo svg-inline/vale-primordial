@@ -23,7 +23,6 @@ No backend is allowed in the default architecture.
 Use the following stack:
 
 - Vite
-- TypeScript
 - Tailwind CSS
 - LiteDom.js
 - Web Worker
@@ -93,16 +92,16 @@ perfect-world-helper/
 │     └─ litedom.js
 ├─ src/
 │  ├─ app/
-│  │  ├─ router.ts
-│  │  ├─ routes.ts
-│  │  └─ bootstrap.ts
+│  │  ├─ router.js
+│  │  ├─ routes.js
+│  │  └─ bootstrap.js
 │  ├─ components/
-│  │  ├─ AppShell.ts
-│  │  ├─ ItemCard.ts
-│  │  ├─ SearchInput.ts
-│  │  ├─ FilterSelect.ts
-│  │  ├─ MaterialList.ts
-│  │  └─ CalculatorResult.ts
+│  │  ├─ AppShell.js
+│  │  ├─ ItemCard.js
+│  │  ├─ SearchInput.js
+│  │  ├─ FilterSelect.js
+│  │  ├─ MaterialList.js
+│  │  └─ CalculatorResult.js
 │  ├─ data/
 │  │  ├─ items.json
 │  │  ├─ dusk-drops.json
@@ -110,42 +109,42 @@ perfect-world-helper/
 │  │  ├─ divine-books.json
 │  │  └─ stones.json
 │  ├─ pages/
-│  │  ├─ HomePage.ts
-│  │  ├─ DuskDropsPage.ts
-│  │  ├─ EquipmentsPage.ts
-│  │  ├─ DivineBooksPage.ts
-│  │  └─ StonesPage.ts
+│  │  ├─ HomePage.js
+│  │  ├─ DuskDropsPage.js
+│  │  ├─ EquipmentsPage.js
+│  │  ├─ DivineBooksPage.js
+│  │  └─ StonesPage.js
 │  ├─ stores/
-│  │  ├─ app.store.ts
-│  │  ├─ filters.store.ts
-│  │  └─ calculator.store.ts
+│  │  ├─ app.store.js
+│  │  ├─ filters.store.js
+│  │  └─ calculator.store.js
 │  ├─ workers/
-│  │  ├─ data.worker.ts
-│  │  ├─ worker-client.ts
-│  │  ├─ search.ts
-│  │  ├─ filters.ts
-│  │  └─ calculators.ts
+│  │  ├─ data.worker.js
+│  │  ├─ worker-client.js
+│  │  ├─ search.js
+│  │  ├─ filters.js
+│  │  └─ calculators.js
 │  ├─ schemas/
-│  │  ├─ item.schema.ts
-│  │  ├─ dusk.schema.ts
-│  │  ├─ equipment.schema.ts
-│  │  ├─ divine-book.schema.ts
-│  │  └─ stone.schema.ts
+│  │  ├─ item.schema.js
+│  │  ├─ dusk.schema.js
+│  │  ├─ equipment.schema.js
+│  │  ├─ divine-book.schema.js
+│  │  └─ stone.schema.js
 │  ├─ utils/
-│  │  ├─ escape-html.ts
-│  │  ├─ format.ts
-│  │  └─ normalize.ts
+│  │  ├─ escape-html.js
+│  │  ├─ format.js
+│  │  └─ normalize.js
 │  ├─ styles/
 │  │  └─ main.css
-│  └─ main.ts
+│  └─ main.js
 ├─ tests/
 │  ├─ calculators/
 │  ├─ search/
 │  └─ data/
 ├─ index.html
 ├─ package.json
-├─ vite.config.ts
-├─ tailwind.config.ts
+├─ vite.config.js
+├─ tailwind.config.js
 └─ AGENTS.md
 ```
 
@@ -198,7 +197,7 @@ Reason: LiteDom depends on browser DOM APIs like `document`, `window`, `Element`
 
 Prefer:
 
-```ts
+```js
 component("#app", () => {
   return `
     <main class="app">
@@ -210,7 +209,7 @@ component("#app", () => {
 
 Use delegated actions where possible:
 
-```ts
+```js
 component("#app", renderPage)
   .on("search", handleSearch)
   .on("clearFilters", handleClearFilters);
@@ -222,13 +221,13 @@ Avoid injecting raw JSON values directly into HTML.
 
 Bad:
 
-```ts
+```js
 return `<h2>${item.name}</h2>`;
 ```
 
 Good:
 
-```ts
+```js
 return `<h2>${escapeHtml(item.name)}</h2>`;
 ```
 
@@ -261,38 +260,36 @@ Do not use Worker for:
 
 ### Worker message pattern
 
-Use typed messages.
+Use structured message objects.
 
 Example:
 
-```ts
-type WorkerRequest =
-  | { type: "INIT" }
-  | { type: "SEARCH_ITEMS"; query: string }
-  | { type: "FILTER_DUSK"; filters: DuskFilters }
-  | { type: "CALCULATE_EQUIPMENT"; equipmentIds: string[] }
-  | {
-      type: "CALCULATE_DIVINE_BOOK";
-      bookId: string;
-      owned: Record<string, number>;
-    }
-  | {
-      type: "CALCULATE_STONES";
-      fromLevel: number;
-      toLevel: number;
-      quantity: number;
-    };
+```js
+{ type: "INIT" }
+{ type: "SEARCH_ITEMS", query: "dust" }
+{ type: "FILTER_DUSK", filters: duskFilters }
+{ type: "CALCULATE_EQUIPMENT", equipmentIds: ["equipment-example"] }
+{
+  type: "CALCULATE_DIVINE_BOOK",
+  bookId: "divine-book-example",
+  owned: { "item-page-example": 10 }
+}
+{
+  type: "CALCULATE_STONES",
+  fromLevel: 1,
+  toLevel: 5,
+  quantity: 2
+}
 ```
 
-Responses must also be typed:
+Responses must also use predictable shapes:
 
-```ts
-type WorkerResponse =
-  | { type: "READY" }
-  | { type: "SEARCH_ITEMS_RESULT"; items: Item[] }
-  | { type: "FILTER_DUSK_RESULT"; results: DuskDropResult[] }
-  | { type: "CALCULATION_RESULT"; result: CalculationResult }
-  | { type: "ERROR"; message: string };
+```js
+{ type: "READY" }
+{ type: "SEARCH_ITEMS_RESULT", items: [] }
+{ type: "FILTER_DUSK_RESULT", results: [] }
+{ type: "CALCULATION_RESULT", result: calculationResult }
+{ type: "ERROR", message: "Something went wrong" }
 ```
 
 The UI must not know internal Worker implementation details.
@@ -403,13 +400,13 @@ Calculation functions must be pure whenever possible.
 
 Good:
 
-```ts
+```js
 calculateStoneCost(input, stoneTable);
 ```
 
 Bad:
 
-```ts
+```js
 calculateStoneCostFromSelectedInputs();
 ```
 
@@ -622,9 +619,9 @@ Prioritize calculation correctness.
 
 ## Code Style
 
-Use TypeScript.
+Use JavaScript modules.
 
-Use explicit types for:
+Use clear object shapes and validation for:
 
 - Worker messages.
 - JSON models.
@@ -634,13 +631,13 @@ Use explicit types for:
 
 Prefer:
 
-```ts
+```js
 const value = ...
 ```
 
 Avoid:
 
-```ts
+```js
 var value = ...
 ```
 
@@ -663,10 +660,10 @@ Examples:
 Good file names:
 
 ```txt
-DuskDropsPage.ts
-DivineBooksPage.ts
-stone-calculator.ts
-equipment-materials.ts
+DuskDropsPage.js
+DivineBooksPage.js
+stone-calculator.js
+equipment-materials.js
 ```
 
 Good IDs:
@@ -709,7 +706,7 @@ Recommended scripts:
     "preview": "vite preview",
     "test": "vitest",
     "test:run": "vitest run",
-    "lint:data": "tsx scripts/validate-data.ts"
+    "lint:data": "node scripts/validate-data.js"
   }
 }
 ```
@@ -754,7 +751,7 @@ Do not add frameworks unless there is a strong reason.
 Use this architecture:
 
 ```txt
-Vite + TypeScript + Tailwind + LiteDom + Web Worker + JSON
+Vite + JavaScript + Tailwind + LiteDom + Web Worker + JSON
 ```
 
 LiteDom owns the interface.
