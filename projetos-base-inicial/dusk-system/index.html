@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dusk Index | Palácio do Crepúsculo</title>
+  <meta name="description" content="Sistema local para consultar Dusks, bosses e drops do Palácio do Crepúsculo.">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="app-header__content">
+        <p class="app-header__eyebrow">Perfect World</p>
+        <h1 class="app-header__title">Palácio do Crepúsculo / Dusk</h1>
+        <p class="app-header__description">Consulta local indexada por Dusk, boss e drop.</p>
+      </div>
+
+      <div class="app-search" role="search">
+        <label class="app-search__label" for="global-search">Buscar</label>
+        <input class="app-search__input" id="global-search" type="search" autocomplete="off" placeholder="Digite item, boss, dusk ou modo...">
+      </div>
+    </header>
+
+    <nav class="app-tabs" aria-label="Navegação principal">
+      <button class="app-tabs__button is-active" type="button" data-view="dashboard">Resumo</button>
+      <button class="app-tabs__button" type="button" data-view="dusks">Dusks</button>
+      <button class="app-tabs__button" type="button" data-view="bosses">Bosses</button>
+      <button class="app-tabs__button" type="button" data-view="drops">Drops</button>
+      <button class="app-tabs__button" type="button" data-view="equipment">Equipamentos</button>
+    </nav>
+
+    <section class="filters" aria-label="Filtros">
+      <div class="filters__field">
+        <label for="filter-chapter">Capítulo</label>
+        <select id="filter-chapter" data-filter="chapter"></select>
+      </div>
+      <div class="filters__field">
+        <label for="filter-dusk">Dusk</label>
+        <select id="filter-dusk" data-filter="dusk"></select>
+      </div>
+      <div class="filters__field">
+        <label for="filter-boss">Boss</label>
+        <select id="filter-boss" data-filter="boss"></select>
+      </div>
+      <div class="filters__field">
+        <label for="filter-mode">Modo</label>
+        <select id="filter-mode" data-filter="mode">
+          <option value="all">Todos</option>
+          <option value="Solo">Solo</option>
+          <option value="Grupo">Grupo</option>
+          <option value="Não informado">Não informado</option>
+        </select>
+      </div>
+      <div class="filters__field">
+        <label for="filter-table">Tabela</label>
+        <select id="filter-table" data-filter="dropTable"></select>
+      </div>
+      <div class="filters__field">
+        <label for="filter-sort">Ordenar</label>
+        <select id="filter-sort" data-filter="sort">
+          <option value="name">Nome</option>
+          <option value="dusk">Dusk</option>
+          <option value="boss">Boss</option>
+          <option value="table">Tabela</option>
+        </select>
+      </div>
+      <button class="filters__reset" type="button" id="reset-filters">Limpar</button>
+    </section>
+
+    <main class="app-main" id="app-main" tabindex="-1"></main>
+  </div>
+
+  <aside class="detail-panel" id="detail-panel" aria-hidden="true">
+    <button class="detail-panel__backdrop" type="button" data-close-panel aria-label="Fechar detalhes"></button>
+    <section class="detail-panel__card" role="dialog" aria-modal="true" aria-labelledby="detail-title">
+      <button class="detail-panel__close" type="button" data-close-panel aria-label="Fechar">×</button>
+      <div id="detail-content"></div>
+    </section>
+  </aside>
+
+  <template id="empty-template">
+    <section class="empty-state">
+      <h2>Nenhum resultado encontrado</h2>
+      <p>Limpe filtros ou tente outro termo de busca.</p>
+    </section>
+  </template>
+
+  <script src="data/dusk-index.js"></script>
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "equipment": [
+    {
+      "id": "example-weapon",
+      "name": "Exemplo de Equipamento",
+      "type": "weapon",
+      "level": 90,
+      "grade": "gold",
+      "image": "output/images/example.jpg",
+      "requiredItems": [
+        {
+          "itemId": "simbolo-do-crepusculo",
+          "quantity": 1
+        },
+        {
+          "itemId": "alma-pura-da-escuridao",
+          "quantity": 2
+        }
+      ],
+      "notes": "Use itemId igual ao id do item em data/dusk-index.json."
+    }
+  ]
+}

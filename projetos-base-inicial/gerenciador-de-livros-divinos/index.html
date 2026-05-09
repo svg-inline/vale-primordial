@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Livro Divino — Perfect World</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-ornament">
+        <div class="ornament-line"></div>
+        <div class="ornament-diamond"></div>
+        <div class="ornament-line"></div>
+      </div>
+      <h1>Livro Divino</h1>
+      <p>Perfect World — Gerenciador de Crafting</p>
+    </header>
+
+    <div class="stats-bar" id="statsBar">
+      <span>Total: <span class="stat-val" id="totalCount">0</span></span>
+      <span>Obtidos: <span class="stat-val" id="ownedCount">0</span></span>
+      <span>Visíveis: <span class="stat-val" id="visibleCount">0</span></span>
+    </div>
+
+    <div class="app-container">
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        <div class="sidebar-title">⚗ Filtros</div>
+
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Buscar livro..."
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="stat-filter">
+          <label>Filtrar por Atributo</label>
+          <select id="statFilter">
+            <option value="">Todos os atributos</option>
+            <option value="For">Força (For)</option>
+            <option value="Dex">Destreza (Dex)</option>
+            <option value="Con">Constituição (Con)</option>
+            <option value="Int">Inteligência (Int)</option>
+            <option value="Mov">Velocidade (Mov)</option>
+            <option value="Crítico">Crítico</option>
+            <option value="HP">HP</option>
+            <option value="MP">MP</option>
+            <option value="Recup">Recuperação</option>
+            <option value="Exp">Experiência</option>
+            <option value="Invoc">Invocação</option>
+            <option value="Red">Redução de Dano</option>
+            <option value="Vel">Velocidade de Ataque</option>
+          </select>
+        </div>
+
+        <div class="filter-row" id="ownedFilter">
+          <button class="pill active" data-filter="all">Todos</button>
+          <button class="pill" data-filter="owned">Obtidos</button>
+          <button class="pill" data-filter="missing">Faltando</button>
+        </div>
+
+        <hr
+          style="
+            border: none;
+            border-top: 1px solid rgba(201, 168, 76, 0.12);
+            margin: 0.5rem 0 1rem;
+          "
+        />
+
+        <div class="my-books-section">
+          <div class="section-header">
+            <span class="section-label">📚 Meus Livros</span>
+            <button class="clear-btn" id="clearAll">Limpar tudo</button>
+          </div>
+          <div class="owned-list" id="ownedList">
+            <div class="empty-owned">Nenhum livro obtido ainda.</div>
+          </div>
+        </div>
+
+        <div
+          class="materials-needed"
+          id="materialsNeeded"
+          style="display: none"
+        >
+          <div class="mat-title">🧪 Materiais para Próximo Nível</div>
+          <div id="matsList"></div>
+        </div>
+
+        <!-- PRESETS -->
+        <div class="presets-section">
+          <div class="section-header">
+            <span class="section-label">💾 Presets</span>
+          </div>
+          <div class="preset-row">
+            <input
+              type="text"
+              id="presetName"
+              class="preset-input"
+              placeholder="Nome do preset..."
+              autocomplete="off"
+            />
+            <button class="preset-btn" id="savePresetBtn">Salvar</button>
+          </div>
+          <div class="preset-list" id="presetList"></div>
+          <div class="ie-row">
+            <button class="ie-btn" id="exportBtn">Exportar</button>
+            <button class="ie-btn" id="importBtn">Importar</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN -->
+      <main class="main-content">
+        <div class="tabs-row" id="tabsRow"></div>
+        <div class="books-grid" id="booksGrid"></div>
+      </main>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal" id="modal">
+        <button class="modal-close" id="modalClose">✕</button>
+        <div class="modal-top">
+          <img class="modal-img" id="modalImg" src="" alt="" />
+          <div>
+            <div class="modal-name" id="modalName"></div>
+            <span
+              id="modalLevel"
+              style="
+                font-family: Cinzel, serif;
+                font-size: 0.65rem;
+                color: var(--gold-dark);
+                background: rgba(201, 168, 76, 0.1);
+                padding: 0.1rem 0.4rem;
+                border-radius: 2px;
+                border: 1px solid rgba(201, 168, 76, 0.2);
+              "
+            ></span>
+          </div>
+        </div>
+        <div class="modal-section-label">Efeitos</div>
+        <div class="modal-effects" id="modalEffects"></div>
+        <div class="modal-section-label">Materiais Necessários</div>
+        <div class="modal-mats" id="modalMats"></div>
+        <div class="modal-progress" id="modalProgress">
+          <div class="modal-progress-label">
+            Progresso Base (P/ Criar do Zero)
+          </div>
+          <div class="modal-progress-text" id="modalProgressText">0%</div>
+          <div class="progress-container">
+            <div
+              class="progress-bar"
+              id="modalProgressBar"
+              style="width: 0%"
+            ></div>
+          </div>
+        </div>
+        <button class="view-tree-btn" id="viewTreeBtn">
+          Visualizar Árvore de Criação 🌳
+        </button>
+        <button
+          class="modal-toggle-btn"
+          id="modalToggleBtn"
+          style="margin-top: 0.5rem"
+        ></button>
+      </div>
+    </div>
+
+    <!-- TOOLTIP -->
+    <div class="tooltip" id="tooltip"></div>
+
+    <!-- TREE OVERLAY -->
+    <div class="tree-overlay" id="treeOverlay">
+      <div class="tree-header">
+        <div class="tree-title">
+          <img id="treeTitleImg" src="" alt="icon" />
+          <span id="treeTitleName">Árvore de Criação</span>
+        </div>
+        <div class="tree-header-actions">
+          <div class="view-toggles">
+            <button
+              class="view-toggle-btn active"
+              id="btnViewTree"
+              title="Ver como Árvore"
+            >
+              🌳 Árvore
+            </button>
+            <button
+              class="view-toggle-btn"
+              id="btnViewList"
+              title="Ver como Lista Quantitativa"
+            >
+              📝 Lista
+            </button>
+            <button
+              class="view-toggle-btn reset-btn"
+              id="btnResetTree"
+              title="Limpar progresso desta árvore"
+            >
+              🧹 Resetar
+            </button>
+          </div>
+          <button class="tree-close" id="treeClose" title="Fechar">
+            ✕ Fechar
+          </button>
+        </div>
+      </div>
+      <div class="tree-content" id="treeContent">
+        <div class="cost-panel" id="treeCostPanel">
+          <div class="cost-panel-title">
+            <span>Custo Base Restante (Descontando Livros Obtidos)</span>
+          </div>
+          <div class="cost-mats" id="treeCostMats"></div>
+          <div class="progress-container" style="margin-top: 1.5rem">
+            <div
+              class="progress-bar"
+              id="treeProgressBar"
+              style="width: 0%"
+            ></div>
+          </div>
+        </div>
+        <div class="craft-tree" id="craftTreeContainer"></div>
+        <div
+          class="craft-list-view"
+          id="craftListContainer"
+          style="display: none"
+        ></div>
+      </div>
+    </div>
+
+    <!-- TOASTS -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
