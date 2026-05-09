@@ -243,6 +243,34 @@ Because LiteDom renders through `innerHTML`, all dynamic strings from JSON or us
 
 ---
 
+## Custom Component Rules
+
+Prefer existing custom components over native HTML elements when a matching project component exists.
+
+Examples:
+
+- Use `SearchInput` instead of repeating raw search input markup.
+- Use `FilterSelect` instead of creating one-off filter `<select>` markup.
+- Use `MaterialList` instead of duplicating material list rendering.
+- Use `CalculatorResult` instead of building calculator result blocks inline.
+
+If no suitable custom component exists, create a reusable component in `src/components/` before adding repeated UI markup directly to a page.
+
+Custom components must follow the project patterns:
+
+- Render with LiteDom-compatible string output.
+- Escape all dynamic JSON or user-provided strings before inserting them into HTML.
+- Keep visible labels and accessibility text translation-ready through `t(...)`.
+- Use Tailwind classes and semantic CSS variables from the active style preset.
+- Use Lucide icons through the shared `Icon` renderer when an icon is needed.
+- Keep component logic UI-only; data processing, filtering, search, and calculations stay in the Worker.
+- Prefer small, focused props and stable object shapes.
+- Remain keyboard accessible and use semantic HTML for interactive elements.
+
+Do not create page-specific duplicate components when a shared component can cover the same interaction with clear props.
+
+---
+
 ## Web Worker Rules
 
 Use Worker for:
