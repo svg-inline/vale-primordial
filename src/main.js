@@ -2,16 +2,28 @@ import ListFilter from "lucide/dist/esm/icons/list-filter.mjs";
 import Search from "lucide/dist/esm/icons/search.mjs";
 import Sparkles from "lucide/dist/esm/icons/sparkles.mjs";
 import Trash2 from "lucide/dist/esm/icons/trash-2.mjs";
-import "./styles/main.css";
-import "./libs/litedom.js";
-import { Button, Dropdown, Icon, Input, LinkButton, Modal, Select, Switch, Tabs, Textarea, Toggle } from "./components/ui/index.js";
-import { changeLanguage, getLanguage, initI18n, supportedLanguages, t } from "./i18n/index.js";
-import { defaultStylePreset, isStylePreset, stylePresets } from "./styles/style-presets.js";
-import { escapeHtml } from "./utils/escape-html.js";
+import { DivineBooksPage } from "./features/divine-books/pages/DivineBooksPage.js";
+import { DuskDropsPage } from "./features/dusk-drops/pages/DuskDropsPage.js";
+import { EquipmentsPage } from "./features/equipments/pages/EquipmentsPage.js";
+import { StonesPage } from "./features/stones/pages/StonesPage.js";
+import "./shared/styles/main.css";
+import "./shared/libs/litedom.js";
+import { Button, Dropdown, Icon, Input, LinkButton, Modal, Select, Switch, Tabs, Textarea, Toggle } from "./shared/components/ui/index.js";
+import { changeLanguage, getLanguage, initI18n, supportedLanguages, t } from "./shared/i18n/index.js";
+import { readPreference, writePreference } from "./shared/stores/storage.js";
+import { defaultStylePreset, isStylePreset, stylePresets } from "./shared/styles/style-presets.js";
+import { escapeHtml } from "./shared/utils/escape-html.js";
 
 const { component, useState } = globalThis;
 const tx = (key, options) => escapeHtml(t(key, options));
 const stylePresetStorageKey = "perfect-world-helper:style-preset";
+const routes = [
+  { path: "/", hash: "#/", labelKey: "nav.home", titleKey: "app.name", render: null },
+  { path: "/dusk", hash: "#/dusk", labelKey: "nav.dusk", titleKey: "nav.dusk", render: DuskDropsPage },
+  { path: "/equipments", hash: "#/equipments", labelKey: "nav.equipments", titleKey: "nav.equipments", render: EquipmentsPage },
+  { path: "/divine-books", hash: "#/divine-books", labelKey: "nav.divineBooks", titleKey: "nav.divineBooks", render: DivineBooksPage },
+  { path: "/stones", hash: "#/stones", labelKey: "nav.stones", titleKey: "nav.stones", render: StonesPage }
+];
 
 bootstrap();
 
@@ -36,6 +48,7 @@ function renderApp() {
   const [onlyFavorites, setOnlyFavorites] = useState(false);
   const [compactMode, setCompactMode] = useState(true);
   const [activeTab, setActiveTab] = useState("filters");
+  const [currentPath, setCurrentPath] = useState(readCurrentPath());
 
   const equipmentOptions = [
     { value: "weapon", label: t("equipment.types.weapon") },
@@ -44,6 +57,12 @@ function renderApp() {
   ];
 
   queueMicrotask(() => {
+    window.addEventListener("hashchange", () => {
+      const nextPath = readCurrentPath();
+
+      syncDocumentMetadata(nextPath);
+      setCurrentPath(nextPath);
+    }, { once: true });
     document.querySelector("[data-action='toggleLanguageSelect']")?.addEventListener("click", () => {
       setLanguageSelectOpen(!languageSelectOpen);
       setStylePresetSelectOpen(false);
@@ -152,17 +171,19 @@ function renderApp() {
             </a>
 
             <nav class="flex flex-wrap gap-2" aria-label="${tx("nav.primary")}">
-              ${LinkButton({ label: t("nav.home"), href: "#/", current: true })}
-              ${LinkButton({ label: t("nav.dusk"), href: "#/dusk" })}
-              ${LinkButton({ label: t("nav.equipments"), href: "#/equipments" })}
-              ${LinkButton({ label: t("nav.divineBooks"), href: "#/divine-books" })}
-              ${LinkButton({ label: t("nav.stones"), href: "#/stones" })}
+              ${routes.map((route) => LinkButton({
+                label: t(route.labelKey),
+                href: route.hash,
+                current: currentPath === route.path
+              })).join("")}
             </nav>
           </div>
         </div>
       </header>
 
       <main class="mx-auto grid w-full max-w-6xl gap-8 px-4 py-8 sm:px-6 lg:px-8">
+        ${currentPath === "/" ? "" : renderFeaturePage(currentPath)}
+        <div class="${currentPath === "/" ? "grid gap-8" : "hidden"}">
         <section class="grid gap-3">
           <p class="app-muted text-sm font-bold uppercase tracking-[0.14em]">${tx("home.eyebrow")}</p>
           <div>
@@ -313,6 +334,7 @@ function renderApp() {
           { label: t("actions.confirm"), variant: "primary", action: "closeModal", data: { modalId: "example-modal" } }
         ]
       })}
+        </div>
       </main>
 
       <footer class="border-t border-border bg-surface-muted">
@@ -330,19 +352,32 @@ function renderApp() {
   `;
 }
 
-function syncDocumentMetadata() {
-  document.title = t("app.name");
+function renderFeaturePage(path) {
+  const route = routes.find((item) => item.path === path);
+
+  if (!route?.render) {
+    return "";
+  }
+
+  return route.render();
+}
+
+function syncDocumentMetadata(path = readCurrentPath()) {
+  const route = routes.find((item) => item.path === path) ?? routes[0];
+  document.title = route.titleKey === "app.name" ? t("app.name") : `${t(route.titleKey)} | ${t("app.name")}`;
   document.querySelector("meta[name='description']")?.setAttribute("content", t("meta.description"));
 }
 
-function readStoredStylePreset() {
-  try {
-    const storedStylePreset = localStorage.getItem(stylePresetStorageKey);
+function readCurrentPath() {
+  const hashPath = window.location.hash.replace(/^#/, "") || "/";
 
-    return isStylePreset(storedStylePreset) ? storedStylePreset : defaultStylePreset;
-  } catch {
-    return defaultStylePreset;
-  }
+  return routes.some((route) => route.path === hashPath) ? hashPath : "/";
+}
+
+function readStoredStylePreset() {
+  const storedStylePreset = readPreference(stylePresetStorageKey, defaultStylePreset);
+
+  return isStylePreset(storedStylePreset) ? storedStylePreset : defaultStylePreset;
 }
 
 function readCurrentStylePreset() {
@@ -356,9 +391,5 @@ function applyStylePreset(stylePreset) {
 
   document.documentElement.dataset.stylePreset = nextStylePreset;
 
-  try {
-    localStorage.setItem(stylePresetStorageKey, nextStylePreset);
-  } catch {
-    // Local preferences can fail in restricted browser contexts.
-  }
+  writePreference(stylePresetStorageKey, nextStylePreset);
 }

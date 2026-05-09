@@ -72,5 +72,13 @@
   "stylePresets.highContrast": "Alto contraste",
   "stylePresets.cupcake": "Cupcake",
   "stylePresets.dracula": "Dracula",
-  "stylePresets.light": "Claro"
+  "stylePresets.light": "Claro",
+  "features.divineBooks.eyebrow": "Calculadora de libros",
+  "features.divineBooks.description": "Área aislada para datos, componentes, stores y handlers de Libros Divinos.",
+  "features.duskDrops.eyebrow": "Consulta de drops",
+  "features.duskDrops.description": "Área aislada para filtros, búsqueda y agrupación de drops Dusk.",
+  "features.equipments.eyebrow": "Materiales de equipamientos",
+  "features.equipments.description": "Área aislada para listas de equipamientos y cálculo agregado de materiales.",
+  "features.stones.eyebrow": "Forja de piedras",
+  "features.stones.description": "Área aislada para cálculo determinístico de piedras y costo estimado."
 }

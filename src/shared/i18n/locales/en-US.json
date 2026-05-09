@@ -72,5 +72,13 @@
   "stylePresets.highContrast": "High contrast",
   "stylePresets.cupcake": "Cupcake",
   "stylePresets.dracula": "Dracula",
-  "stylePresets.light": "Light"
+  "stylePresets.light": "Light",
+  "features.divineBooks.eyebrow": "Book calculator",
+  "features.divineBooks.description": "Isolated area for Divine Book data, components, stores, and handlers.",
+  "features.duskDrops.eyebrow": "Drop lookup",
+  "features.duskDrops.description": "Isolated area for Dusk drop filters, search, and grouping.",
+  "features.equipments.eyebrow": "Equipment materials",
+  "features.equipments.description": "Isolated area for equipment lists and aggregated material calculation.",
+  "features.stones.eyebrow": "Stone forging",
+  "features.stones.description": "Isolated area for deterministic stone calculation and estimated cost."
 }
