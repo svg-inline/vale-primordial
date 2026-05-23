@@ -6,17 +6,17 @@ describe("data worker router", () => {
   it("routes feature messages to the matching handler", async () => {
     await expect(dispatchWorkerMessage({
       feature: "divineBooks",
-      action: "CALCULATE_TREE",
+      action: "BUILD_TREE",
       payload: {
-        bookId: "pangu",
+        itemId: "divine-book-pan-gu",
         owned: {}
       }
-    })).resolves.toEqual({
-      bookId: "pangu",
-      owned: {},
-      required: [],
-      missing: [],
-      warnings: ["BOOK_NOT_FOUND"]
+    })).resolves.toMatchObject({
+      tree: {
+        itemId: "divine-book-pan-gu",
+        name: "Pan gu"
+      },
+      warnings: []
     });
   });
 
@@ -25,5 +25,12 @@ describe("data worker router", () => {
       feature: "unknown",
       action: "LIST"
     })).rejects.toThrow("Unknown worker feature: unknown");
+  });
+
+  it("rejects unknown actions", async () => {
+    await expect(dispatchWorkerMessage({
+      feature: "divineBooks",
+      action: "NOPE"
+    })).rejects.toThrow("Unknown divineBooks action: NOPE");
   });
 });

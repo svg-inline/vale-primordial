@@ -1,15 +1,20 @@
 import divineBooks from "../data/divine-books.json";
+import { createDivineBooksService } from "./divine-books.calculator.js";
 
 const handlers = {
-  LIST_BOOKS: () => ({ books: divineBooks }),
-  CALCULATE_TREE: ({ bookId = "", owned = {} } = {}) => ({
-    bookId,
-    owned,
-    required: [],
-    missing: [],
-    warnings: divineBooks.some((book) => book.id === bookId) ? [] : ["BOOK_NOT_FOUND"]
-  })
+  GET_INITIAL_STATE: () => service.getInitialState(),
+  FILTER: (payload) => service.filterBooks(payload),
+  GET_ITEM: (payload) => service.getItem(payload),
+  CALCULATE_BASE_MATERIALS: (payload) => service.calculateBaseMaterials(payload),
+  BUILD_TREE: (payload) => service.buildTree(payload),
+  BUILD_LIST: (payload) => service.buildList(payload),
+  CALCULATE_PROGRESS: (payload) => service.calculateProgress(payload),
+  VALIDATE_DATA: () => ({ warnings: service.validateData() }),
+  LIST_BOOKS: () => ({ books: service.getInitialState().books }),
+  CALCULATE_TREE: (payload) => service.buildTree(payload)
 };
+
+const service = createDivineBooksService(divineBooks);
 
 export function divineBooksHandlers({ action, payload = {} } = {}) {
   const handler = handlers[action];
