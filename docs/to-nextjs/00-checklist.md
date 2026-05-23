@@ -37,15 +37,15 @@ Use este arquivo para rastrear o progresso do refactor.
 - [x] Criar `src/lib/supabase/client.ts`
 - [x] Criar `src/lib/supabase/server.ts`
 - [x] Criar `src/providers/QueryProvider.tsx`
-- [ ] Criar `src/providers/ThemeProvider.tsx`
-- [ ] Criar `src/i18n/routing.ts`
-- [ ] Criar `src/i18n/request.ts`
-- [ ] Criar `src/middleware.ts`
-- [ ] Copiar e adaptar locale files para `src/i18n/locales/`
+- [x] Criar `src/providers/ThemeProvider.tsx`
+- [x] Criar `src/i18n/routing.ts`
+- [x] Criar `src/i18n/request.ts`
+- [x] Criar `src/proxy.ts` (Next.js 16 substitui `middleware.ts`)
+- [x] Copiar e adaptar locale files para `src/i18n/locales/`
 - [x] Criar `src/app/layout.tsx` com shell da aplicação
 - [x] Configurar CSS variables em `src/app/globals.css`
-- [ ] Criar `src/stores/app.store.ts`
-- [ ] Criar script anti-FOUC no layout
+- [x] Criar `src/stores/app.store.ts`
+- [x] Criar script anti-FOUC no layout
 
 ---
 

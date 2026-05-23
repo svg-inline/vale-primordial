@@ -1,0 +1,248 @@
+{
+  "app": {
+    "name": "Perfect World Helper",
+    "tagline": "Guía estática de juego"
+  },
+  "meta": {
+    "description": "Helper estático para jugadores de Perfect World."
+  },
+  "topbar": {
+    "label": "Preferencias de la interfaz"
+  },
+  "nav": {
+    "primary": "Navegación principal",
+    "example": "Navegación de ejemplo",
+    "home": "Inicio",
+    "dusk": "Drops Dusk",
+    "equipments": "Equipamientos",
+    "divineBooks": "Libros Divinos",
+    "stones": "Piedras"
+  },
+  "home": {
+    "eyebrow": "Interfaz del helper",
+    "title": "Componentes personalizables",
+    "description": "Base visual para acciones, navegación, campos, filtros, menús y ventanas del helper."
+  },
+  "sections": {
+    "buttons": {
+      "title": "Button / Link",
+      "description": "Variaciones de acción con tamaño, intención y estado."
+    },
+    "inputs": {
+      "title": "Inputs / Select",
+      "description": "Campos con etiqueta, ayuda, error, required y atributos extras."
+    },
+    "toggles": {
+      "title": "Toggle / Switch / Tabs",
+      "description": "Controles para preferencias, modos y navegación interna."
+    },
+    "menus": {
+      "title": "Dropdown / Modal",
+      "description": "Menús y ventanas accesibles con acciones delegables."
+    }
+  },
+  "actions": {
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "clear": "Limpiar",
+    "remove": "Eliminar",
+    "disabled": "Desactivado",
+    "saveFilter": "Guardar filtro",
+    "exportList": "Exportar lista",
+    "deletePreset": "Eliminar preset",
+    "openModal": "Abrir modal",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "close": "Cerrar",
+    "menu": "Acciones"
+  },
+  "fields": {
+    "search": {
+      "label": "Búsqueda"
+    },
+    "quantity": {
+      "label": "Cantidad"
+    },
+    "invalidExample": {
+      "label": "Ejemplo con error",
+      "error": "Ingresa un valor mayor que cero."
+    },
+    "notes": {
+      "label": "Notas",
+      "placeholder": "Observaciones del cálculo"
+    }
+  },
+  "search": {
+    "placeholder": "Buscar item, boss o equipamiento",
+    "hint": "Usa nombres de materiales, dungeons o equipamientos."
+  },
+  "filters": {
+    "equipmentType": "Tipo de equipamiento",
+    "allEquipmentTypes": "Todos los tipos"
+  },
+  "equipment": {
+    "types": {
+      "weapon": "Arma",
+      "armor": "Armadura",
+      "ornament": "Ornamento"
+    }
+  },
+  "preferences": {
+    "onlyFavorites": "Solo favoritos",
+    "compactMode": "Modo compacto",
+    "language": "Idioma",
+    "stylePreset": "Tema"
+  },
+  "languages": {
+    "pt-BR": "Portugués",
+    "en-US": "Inglés",
+    "es-ES": "Español"
+  },
+  "tabs": {
+    "filters": "Filtros",
+    "results": "Resultados",
+    "history": "Historial"
+  },
+  "modal": {
+    "confirmCalculation": {
+      "title": "Confirmar cálculo",
+      "description": "Revisa la acción antes de aplicarla.",
+      "body": "Este modal ya acepta contenido HTML renderizado por el componente que lo llama. Los textos dinámicos deben llegar escapados."
+    }
+  },
+  "footer": {
+    "description": "Hecho para consultas rápidas, cálculos determinísticos y navegación estática vía GitHub Pages.",
+    "navigation": "Enlaces del pie"
+  },
+  "stylePresets": {
+    "dark": "Oscuro",
+    "arcane": "Arcano",
+    "classic": "Clásico",
+    "highContrast": "Alto contraste",
+    "cupcake": "Cupcake",
+    "dracula": "Dracula",
+    "light": "Claro"
+  },
+  "features": {
+    "divineBooks": {
+      "eyebrow": "Calculadora de libros",
+      "description": "Área aislada para datos, componentes, stores y handlers de Libros Divinos."
+    },
+    "duskDrops": {
+      "eyebrow": "Consulta de drops",
+      "description": "Área aislada para filtros, búsqueda y agrupación de drops Dusk."
+    },
+    "equipments": {
+      "eyebrow": "Materiales de equipamientos",
+      "description": "Área aislada para listas de equipamientos y cálculo agregado de materiales."
+    },
+    "stones": {
+      "eyebrow": "Forja de piedras",
+      "description": "Área aislada para cálculo determinístico de piedras y costo estimado."
+    }
+  },
+  "divineBooks": {
+    "loading": "Cargando libros divinos...",
+    "empty": "No se encontraron libros.",
+    "level": "Nivel {{level}}",
+    "filters": {
+      "title": "Filtros",
+      "stat": "Atributo",
+      "status": "Estado",
+      "tabs": "Pestañas",
+      "allStats": "Todos los atributos",
+      "allTabs": "Todas las pestañas"
+    },
+    "search": {
+      "placeholder": "Buscar libro, efecto o material"
+    },
+    "ownedModes": {
+      "all": "Todos",
+      "owned": "Obtenidos",
+      "missing": "Faltantes"
+    },
+    "stats": {
+      "summary": "{{visibleBooks}} visibles de {{totalBooks}} libros; {{ownedBooks}} obtenidos.",
+      "books": "Libros",
+      "recipes": "Recetas",
+      "For": "Fuerza",
+      "Dex": "Destreza",
+      "Con": "Constitución",
+      "Int": "Inteligencia",
+      "Mov": "Movimiento",
+      "Crítico": "Crítico",
+      "HP": "HP",
+      "MP": "MP",
+      "Recup": "Recuperación",
+      "Exp": "Experiencia",
+      "Invoc": "Invocación",
+      "Red": "Reducción de daño",
+      "Vel": "Velocidad de ataque"
+    },
+    "results": {
+      "title": "Resultados",
+      "count": "{{count}} resultado(s)"
+    },
+    "inventory": {
+      "title": "Mis libros y materiales",
+      "empty": "Ningún item marcado como obtenido."
+    },
+    "presets": {
+      "title": "Presets",
+      "placeholder": "Nombre del preset",
+      "save": "Guardar",
+      "empty": "Ningún preset guardado."
+    },
+    "import": {
+      "export": "Exportar",
+      "import": "Importar",
+      "prompt": "Pega el código exportado de Libros Divinos:"
+    },
+    "actions": {
+      "openDetails": "Abrir detalles de {{name}}",
+      "markOwned": "Marcar obtenido",
+      "removeOwned": "Eliminar obtenido",
+      "addOne": "Agregar 1 {{name}}",
+      "removeOne": "Eliminar 1 {{name}}"
+    },
+    "recipes": {
+      "title": "Recetas",
+      "single": "{{count}} receta",
+      "multiple": "{{count}} recetas",
+      "option": "Receta {{number}}",
+      "materials": "Materiales necesarios",
+      "noMaterials": "Este item no tiene materiales registrados."
+    },
+    "materials": {
+      "title": "Materiales base restantes",
+      "empty": "Todos los materiales base están cubiertos por inventario/progreso."
+    },
+    "progress": {
+      "percent": "Progreso: {{percent}}%"
+    },
+    "tree": {
+      "title": "Árbol: {{name}}",
+      "description": "Haz clic en libros intermedios para marcar progreso solo en este árbol.",
+      "viewTree": "Árbol",
+      "viewList": "Lista",
+      "reset": "Resetear"
+    },
+    "list": {
+      "requiredOwned": "Necesario: {{required}}x · Obtenido: {{owned}}x",
+      "missing": "Falta {{count}}x"
+    },
+    "messages": {
+      "recipeSelected": "Receta seleccionada.",
+      "treeReset": "Progreso del árbol reiniciado.",
+      "presetSaved": "Preset guardado.",
+      "presetLoaded": "Preset cargado.",
+      "presetDeleted": "Preset eliminado.",
+      "exported": "Código exportado copiado al portapapeles.",
+      "imported": "Datos importados."
+    },
+    "errors": {
+      "load": "No fue posible cargar Libros Divinos.",
+      "invalidImport": "Código importado inválido."
+    }
+  }
+}

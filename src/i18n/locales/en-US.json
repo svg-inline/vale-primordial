@@ -1,0 +1,248 @@
+{
+  "app": {
+    "name": "Perfect World Helper",
+    "tagline": "Static game guide"
+  },
+  "meta": {
+    "description": "Static helper for Perfect World players."
+  },
+  "topbar": {
+    "label": "Interface preferences"
+  },
+  "nav": {
+    "primary": "Primary navigation",
+    "example": "Example navigation",
+    "home": "Home",
+    "dusk": "Dusk Drops",
+    "equipments": "Equipment",
+    "divineBooks": "Divine Books",
+    "stones": "Stones"
+  },
+  "home": {
+    "eyebrow": "Helper interface",
+    "title": "Customizable components",
+    "description": "Visual base for actions, navigation, fields, filters, menus, and helper pop-ups."
+  },
+  "sections": {
+    "buttons": {
+      "title": "Button / Link",
+      "description": "Action variations with size, intent, and state."
+    },
+    "inputs": {
+      "title": "Inputs / Select",
+      "description": "Fields with labels, help text, errors, required state, and extra attributes."
+    },
+    "toggles": {
+      "title": "Toggle / Switch / Tabs",
+      "description": "Controls for preferences, modes, and internal navigation."
+    },
+    "menus": {
+      "title": "Dropdown / Modal",
+      "description": "Accessible menus and pop-ups with delegable actions."
+    }
+  },
+  "actions": {
+    "search": "Search",
+    "filter": "Filter",
+    "clear": "Clear",
+    "remove": "Remove",
+    "disabled": "Disabled",
+    "saveFilter": "Save filter",
+    "exportList": "Export list",
+    "deletePreset": "Delete preset",
+    "openModal": "Open modal",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "menu": "Actions"
+  },
+  "fields": {
+    "search": {
+      "label": "Search"
+    },
+    "quantity": {
+      "label": "Quantity"
+    },
+    "invalidExample": {
+      "label": "Error example",
+      "error": "Enter a value greater than zero."
+    },
+    "notes": {
+      "label": "Notes",
+      "placeholder": "Calculation notes"
+    }
+  },
+  "search": {
+    "placeholder": "Search item, boss, or equipment",
+    "hint": "Use material, dungeon, or equipment names."
+  },
+  "filters": {
+    "equipmentType": "Equipment type",
+    "allEquipmentTypes": "All types"
+  },
+  "equipment": {
+    "types": {
+      "weapon": "Weapon",
+      "armor": "Armor",
+      "ornament": "Ornament"
+    }
+  },
+  "preferences": {
+    "onlyFavorites": "Favorites only",
+    "compactMode": "Compact mode",
+    "language": "Language",
+    "stylePreset": "Theme"
+  },
+  "languages": {
+    "pt-BR": "Portuguese",
+    "en-US": "English",
+    "es-ES": "Spanish"
+  },
+  "tabs": {
+    "filters": "Filters",
+    "results": "Results",
+    "history": "History"
+  },
+  "modal": {
+    "confirmCalculation": {
+      "title": "Confirm calculation",
+      "description": "Review the action before applying it.",
+      "body": "This modal already accepts HTML content rendered by the calling component. Dynamic text must arrive escaped."
+    }
+  },
+  "footer": {
+    "description": "Built for quick lookups, deterministic calculations, and static GitHub Pages navigation.",
+    "navigation": "Footer links"
+  },
+  "stylePresets": {
+    "dark": "Dark",
+    "arcane": "Arcane",
+    "classic": "Classic",
+    "highContrast": "High contrast",
+    "cupcake": "Cupcake",
+    "dracula": "Dracula",
+    "light": "Light"
+  },
+  "features": {
+    "divineBooks": {
+      "eyebrow": "Book calculator",
+      "description": "Isolated area for Divine Book data, components, stores, and handlers."
+    },
+    "duskDrops": {
+      "eyebrow": "Drop lookup",
+      "description": "Isolated area for Dusk drop filters, search, and grouping."
+    },
+    "equipments": {
+      "eyebrow": "Equipment materials",
+      "description": "Isolated area for equipment lists and aggregated material calculation."
+    },
+    "stones": {
+      "eyebrow": "Stone forging",
+      "description": "Isolated area for deterministic stone calculation and estimated cost."
+    }
+  },
+  "divineBooks": {
+    "loading": "Loading divine books...",
+    "empty": "No books found.",
+    "level": "Level {{level}}",
+    "filters": {
+      "title": "Filters",
+      "stat": "Attribute",
+      "status": "Status",
+      "tabs": "Tabs",
+      "allStats": "All attributes",
+      "allTabs": "All tabs"
+    },
+    "search": {
+      "placeholder": "Search book, effect, or material"
+    },
+    "ownedModes": {
+      "all": "All",
+      "owned": "Owned",
+      "missing": "Missing"
+    },
+    "stats": {
+      "summary": "{{visibleBooks}} visible of {{totalBooks}} books; {{ownedBooks}} owned.",
+      "books": "Books",
+      "recipes": "Recipes",
+      "For": "Strength",
+      "Dex": "Dexterity",
+      "Con": "Constitution",
+      "Int": "Intelligence",
+      "Mov": "Movement",
+      "Crítico": "Critical",
+      "HP": "HP",
+      "MP": "MP",
+      "Recup": "Recovery",
+      "Exp": "Experience",
+      "Invoc": "Channeling",
+      "Red": "Damage reduction",
+      "Vel": "Attack speed"
+    },
+    "results": {
+      "title": "Results",
+      "count": "{{count}} result(s)"
+    },
+    "inventory": {
+      "title": "My books and materials",
+      "empty": "No item marked as owned."
+    },
+    "presets": {
+      "title": "Presets",
+      "placeholder": "Preset name",
+      "save": "Save",
+      "empty": "No saved presets."
+    },
+    "import": {
+      "export": "Export",
+      "import": "Import",
+      "prompt": "Paste the exported Divine Books code:"
+    },
+    "actions": {
+      "openDetails": "Open details for {{name}}",
+      "markOwned": "Mark owned",
+      "removeOwned": "Remove owned",
+      "addOne": "Add 1 {{name}}",
+      "removeOne": "Remove 1 {{name}}"
+    },
+    "recipes": {
+      "title": "Recipes",
+      "single": "{{count}} recipe",
+      "multiple": "{{count}} recipes",
+      "option": "Recipe {{number}}",
+      "materials": "Required materials",
+      "noMaterials": "This item has no registered materials."
+    },
+    "materials": {
+      "title": "Remaining base materials",
+      "empty": "All base materials are covered by inventory/progress."
+    },
+    "progress": {
+      "percent": "Progress: {{percent}}%"
+    },
+    "tree": {
+      "title": "Tree: {{name}}",
+      "description": "Click intermediate books to mark progress only for this tree.",
+      "viewTree": "Tree",
+      "viewList": "List",
+      "reset": "Reset"
+    },
+    "list": {
+      "requiredOwned": "Required: {{required}}x · Owned: {{owned}}x",
+      "missing": "Missing {{count}}x"
+    },
+    "messages": {
+      "recipeSelected": "Recipe selected.",
+      "treeReset": "Tree progress reset.",
+      "presetSaved": "Preset saved.",
+      "presetLoaded": "Preset loaded.",
+      "presetDeleted": "Preset deleted.",
+      "exported": "Export code copied to clipboard.",
+      "imported": "Data imported."
+    },
+    "errors": {
+      "load": "Could not load Divine Books.",
+      "invalidImport": "Invalid import code."
+    }
+  }
+}

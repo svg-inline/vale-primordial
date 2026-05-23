@@ -3,19 +3,9 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { BookOpen, Boxes, Gem, MoonStar, Sparkles } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
+import { isStylePreset, stylePresets, useAppStore } from "@/stores/app.store";
 import type { ReactNode } from "react";
-
-const stylePresetStorageKey = "perfect-world-helper:style-preset";
-const stylePresets = [
-  { id: "dark", label: "Escuro" },
-  { id: "arcane", label: "Arcano" },
-  { id: "classic", label: "Classico" },
-  { id: "high-contrast", label: "Alto contraste" },
-  { id: "cupcake", label: "Cupcake" },
-  { id: "dracula", label: "Dracula" },
-  { id: "light", label: "Claro" },
-];
 
 const navItems = [
   { href: "/dusk", label: "Drops Dusk", icon: MoonStar },
@@ -30,22 +20,8 @@ interface AppShellProps {
 
 export function AppShell({ children }: AppShellProps) {
   const pathname = usePathname();
-  const [stylePreset, setStylePreset] = useState("dark");
-
-  useEffect(() => {
-    const stored = window.localStorage.getItem(stylePresetStorageKey);
-    const nextPreset = stylePresets.some((preset) => preset.id === stored)
-      ? stored ?? "dark"
-      : "dark";
-
-    setStylePreset(nextPreset);
-    document.documentElement.dataset.stylePreset = nextPreset;
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.dataset.stylePreset = stylePreset;
-    window.localStorage.setItem(stylePresetStorageKey, stylePreset);
-  }, [stylePreset]);
+  const stylePreset = useAppStore((state) => state.stylePreset);
+  const setStylePreset = useAppStore((state) => state.setStylePreset);
 
   const currentTitle = useMemo(() => {
     return navItems.find((item) => item.href === pathname)?.label ?? "Inicio";
@@ -63,7 +39,11 @@ export function AppShell({ children }: AppShellProps) {
               <span className="app-muted text-xs uppercase">Tema</span>
               <select
                 value={stylePreset}
-                onChange={(event) => setStylePreset(event.target.value)}
+                onChange={(event) => {
+                  if (isStylePreset(event.target.value)) {
+                    setStylePreset(event.target.value);
+                  }
+                }}
                 className="app-input"
               >
                 {stylePresets.map((preset) => (
