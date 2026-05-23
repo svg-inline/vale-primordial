@@ -1,6 +1,7 @@
 "use client";
 
-import { Download, Upload, X } from "lucide-react";
+import Link from "next/link";
+import { Download, GitFork, Upload, X } from "lucide-react";
 import { useMemo, useState } from "react";
 import { createDivineBooksService } from "@/lib/calculators/divine-books";
 import { useDivineBooksQuery } from "@/hooks/useDivineBooks";
@@ -9,13 +10,10 @@ import { useDivineBooksStore } from "@/stores/divine-books.store";
 import { DivineBookCard } from "./DivineBookCard";
 import { DivineBookFilters } from "./DivineBookFilters";
 import { DivineBookMaterialsSummary } from "./DivineBookMaterialsSummary";
-import { DivineBookTreeView } from "./DivineBookTreeView";
 import type {
   DivineBookCatalog,
-  DivineBookListEntry,
   DivineBookMaterialsResult,
   DivineBookSummary,
-  DivineBookTreeNode,
 } from "@/types/divine-books";
 
 interface DivineBooksBrowserProps {
@@ -39,8 +37,6 @@ export function DivineBooksBrowser({ catalog }: DivineBooksBrowserProps) {
     filters,
     updateOwned,
     clearOwned,
-    setTreeNodeProgress,
-    resetTreeProgress,
     setRecipePreference,
     setFilters,
     savePreset,
@@ -99,32 +95,6 @@ export function DivineBooksBrowser({ catalog }: DivineBooksBrowserProps) {
       treeProgress,
       recipePreferences: activeRecipePreferences,
     }) as DivineBookMaterialsResult;
-  }, [activeOwned, activeRecipePreferences, rootItemId, service, treeProgress]);
-
-  const tree = useMemo(() => {
-    if (!rootItemId) {
-      return null;
-    }
-
-    return service.buildTree({
-      itemId: rootItemId,
-      owned: activeOwned,
-      treeProgress,
-      recipePreferences: activeRecipePreferences,
-    }).tree as DivineBookTreeNode | null;
-  }, [activeOwned, activeRecipePreferences, rootItemId, service, treeProgress]);
-
-  const listItems = useMemo(() => {
-    if (!rootItemId) {
-      return [];
-    }
-
-    return service.buildList({
-      itemId: rootItemId,
-      owned: activeOwned,
-      treeProgress,
-      recipePreferences: activeRecipePreferences,
-    }).items as DivineBookListEntry[];
   }, [activeOwned, activeRecipePreferences, rootItemId, service, treeProgress]);
 
   const statOptions = useMemo(() => {
@@ -226,16 +196,13 @@ export function DivineBooksBrowser({ catalog }: DivineBooksBrowserProps) {
                 selectedRecipeId={selectedBook.selectedRecipeId}
                 onRecipeChange={(recipeId) => setRecipePreference(selectedBook.item!.id, recipeId)}
               />
-              <DivineBookTreeView
-                rootItemId={selectedBook.item.id}
-                tree={tree}
-                listItems={listItems}
-                progress={treeProgress}
-                onToggleNode={(nodeId, value) =>
-                  setTreeNodeProgress(selectedBook.item!.id, nodeId, value)
-                }
-                onReset={() => resetTreeProgress(selectedBook.item!.id)}
-              />
+              <Link
+                href={`/divine-books/tree?book=${encodeURIComponent(selectedBook.item.id)}`}
+                className="app-button app-button--md app-button--primary"
+              >
+                <GitFork size={16} aria-hidden />
+                Abrir arvore de materiais
+              </Link>
               <section className="grid gap-3 rounded-lg border border-border bg-surface p-4">
                 <h2 className="font-extrabold text-text">Presets</h2>
                 <div className="grid gap-2">
