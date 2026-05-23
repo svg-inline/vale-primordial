@@ -51,20 +51,20 @@ Use este arquivo para rastrear o progresso do refactor.
 
 ## Fase 4 — Componentes UI base
 
-- [ ] `Button.tsx`
-- [ ] `Input.tsx`
-- [ ] `Select.tsx`
-- [ ] `Modal.tsx`
-- [ ] `Tabs.tsx`
-- [ ] `Toggle.tsx`
-- [ ] `Switch.tsx`
-- [ ] `Dropdown.tsx`
-- [ ] `Textarea.tsx`
-- [ ] `AppHeader.tsx`
-- [ ] `AppNav.tsx`
-- [ ] `AppFooter.tsx`
-- [ ] `StylePresetSwitcher.tsx`
-- [ ] `LanguageSwitcher.tsx`
+- [x] `Button.tsx`
+- [x] `Input.tsx`
+- [x] `Select.tsx`
+- [x] `Modal.tsx`
+- [x] `Tabs.tsx`
+- [x] `Toggle.tsx`
+- [x] `Switch.tsx`
+- [x] `Dropdown.tsx`
+- [x] `Textarea.tsx`
+- [x] `AppHeader.tsx`
+- [x] `AppNav.tsx`
+- [x] `AppFooter.tsx`
+- [x] `StylePresetSwitcher.tsx`
+- [x] `LanguageSwitcher.tsx`
 
 ---
 
