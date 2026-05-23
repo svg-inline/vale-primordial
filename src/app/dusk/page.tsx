@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import { EmptyFeature } from "@/components/features/EmptyFeature";
-import { getDuskDropsCatalog } from "@/lib/data/catalogs";
+import { DuskDropsBrowser } from "@/components/features/dusk-drops/DuskDropsBrowser";
+import { getDuskDropsCatalogServer } from "@/lib/queries/dusk-drops";
 
 export const metadata: Metadata = {
   title: "Drops Dusk",
@@ -8,12 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function DuskPage() {
-  const data = getDuskDropsCatalog();
+  const catalog = getDuskDropsCatalogServer();
 
-  return (
-    <EmptyFeature eyebrow="Consulta" title="Drops Dusk" count={data.length}>
-      A estrutura da rota ja esta em Next.js. O JSON atual de Drops Dusk esta vazio em
-      <code className="mx-1 rounded border border-border px-1">project-old/src/features/dusk-drops/data/dusk-drops.json</code>.
-    </EmptyFeature>
-  );
+  return <DuskDropsBrowser catalog={catalog} />;
 }
