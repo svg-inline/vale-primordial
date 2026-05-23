@@ -6,8 +6,8 @@ Use este arquivo para rastrear o progresso do refactor.
 
 ## Fase 1 — Setup
 
-- [ ] Rodar `npx create-next-app@latest perfect-world-helper --typescript --tailwind --eslint --app --src-dir --import-alias "@/*"`
-- [ ] Atualizar Tailwind para v4 (`@tailwindcss/postcss`)
+- [ ] Rodar `npx create-next-app@latest perfect-world-helper --typescript --tailwind --eslint --app --import-alias "@/*"`
+- [ ] Atualizar Tailwind para v4 (`@tailwindcss/postcss`) — já incluso no Next.js 16
 - [ ] Instalar dependências de produção (Supabase, TanStack Query, Zustand, next-intl, next-themes, lucide-react)
 - [ ] Configurar `.env.local`
 - [ ] Configurar `next.config.ts`
@@ -24,7 +24,7 @@ Use este arquivo para rastrear o progresso do refactor.
 - [ ] Rodar migration `004_create_equipments.sql`
 - [ ] Rodar migration `005_create_stones.sql`
 - [ ] Criar script `scripts/seed-supabase.ts`
-- [ ] Rodar seed com dados de `divine-books.json`
+- [ ] Rodar seed com dados de `divine-books.json` ← aguardando SUPABASE_SERVICE_ROLE_KEY
 - [ ] Rodar seed com dados de `dusk-drops.json`
 - [ ] Rodar seed com dados de `equipments.json`
 - [ ] Rodar seed com dados de `stones.json`
