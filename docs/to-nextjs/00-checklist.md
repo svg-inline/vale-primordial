@@ -11,7 +11,7 @@ Use este arquivo para rastrear o progresso do refactor.
 - [x] Instalar dependências de produção usadas nesta etapa (`next`, `react`, `react-dom`, `lucide-react`)
 - [x] Configurar `.env` com variáveis públicas do Supabase
 - [x] Configurar `next.config.ts`
-- [ ] Criar projeto no Supabase (região São Paulo)
+- [x] Criar projeto no Supabase (região São Paulo)
 - [x] Copiar/reutilizar `public/assets/` do projeto atual
 
 ---
@@ -36,7 +36,7 @@ Use este arquivo para rastrear o progresso do refactor.
 
 - [x] Criar `src/lib/supabase/client.ts`
 - [x] Criar `src/lib/supabase/server.ts`
-- [ ] Criar `src/providers/QueryProvider.tsx`
+- [x] Criar `src/providers/QueryProvider.tsx`
 - [ ] Criar `src/providers/ThemeProvider.tsx`
 - [ ] Criar `src/i18n/routing.ts`
 - [ ] Criar `src/i18n/request.ts`
@@ -73,7 +73,7 @@ Use este arquivo para rastrear o progresso do refactor.
 - [x] Criar `src/types/divine-books.ts`
 - [x] Migrar calculadora para `src/lib/calculators/divine-books.js`
 - [x] Criar `src/lib/queries/divine-books.ts`
-- [ ] Criar `src/hooks/useDivineBooks.ts`
+- [x] Criar `src/hooks/useDivineBooks.ts`
 - [x] Criar `src/stores/divine-books.store.ts`
 - [x] Criar `src/app/divine-books/page.tsx`
 - [x] Criar `DivineBooksBrowser.tsx`

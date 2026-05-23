@@ -3,6 +3,7 @@
 import { Download, Upload, X } from "lucide-react";
 import { useMemo, useState } from "react";
 import { createDivineBooksService } from "@/lib/calculators/divine-books";
+import { useDivineBooksQuery } from "@/hooks/useDivineBooks";
 import { useHydration } from "@/hooks/useHydration";
 import { useDivineBooksStore } from "@/stores/divine-books.store";
 import { DivineBookCard } from "./DivineBookCard";
@@ -23,7 +24,8 @@ interface DivineBooksBrowserProps {
 
 export function DivineBooksBrowser({ catalog }: DivineBooksBrowserProps) {
   const hydrated = useHydration();
-  const service = useMemo(() => createDivineBooksService(catalog) as any, [catalog]);
+  const { data: activeCatalog } = useDivineBooksQuery(catalog);
+  const service = useMemo(() => createDivineBooksService(activeCatalog) as any, [activeCatalog]);
   const [selectedBookId, setSelectedBookId] = useState("");
   const [presetName, setPresetName] = useState("");
   const [importValue, setImportValue] = useState("");
@@ -128,7 +130,7 @@ export function DivineBooksBrowser({ catalog }: DivineBooksBrowserProps) {
   const statOptions = useMemo(() => {
     const options = new Set<string>();
 
-    for (const item of catalog.items) {
+    for (const item of activeCatalog.items) {
       for (const effect of item.effects ?? []) {
         const [stat] = effect.split(" ");
 
@@ -139,7 +141,7 @@ export function DivineBooksBrowser({ catalog }: DivineBooksBrowserProps) {
     }
 
     return [...options].sort((a, b) => a.localeCompare(b, "pt-BR"));
-  }, [catalog.items]);
+  }, [activeCatalog.items]);
 
   function handleExport() {
     const payload = exportState();
@@ -186,7 +188,7 @@ export function DivineBooksBrowser({ catalog }: DivineBooksBrowserProps) {
 
       <DivineBookFilters
         filters={filters}
-        tabs={catalog.tabs}
+        tabs={activeCatalog.tabs}
         statOptions={statOptions}
         onChange={setFilters}
       />
