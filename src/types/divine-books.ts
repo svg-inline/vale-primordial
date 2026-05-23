@@ -23,6 +23,7 @@ export interface DivineBooksRecipe {
   id: string;
   resultItemId: string;
   sourceTabId: string;
+  sortOrder?: number;
   materials: DivineBooksRecipeMaterial[];
 }
 
@@ -46,4 +47,43 @@ export interface DivineBookFilters {
   query: string;
   stat: string;
   ownedMode: "all" | "owned" | "missing";
+}
+
+export interface DivineBookMaterialEntry {
+  itemId: string;
+  quantity: number;
+  item: DivineBooksItem | null;
+}
+
+export interface DivineBookMaterialsResult {
+  required: DivineBookMaterialEntry[];
+  missing: DivineBookMaterialEntry[];
+  progressPercent: number;
+  warnings: string[];
+}
+
+export interface DivineBookTreeNode {
+  nodeId: string;
+  itemId: string;
+  name: string;
+  type: "divine-book" | "material";
+  level: number | null;
+  icon: string;
+  quantity: number;
+  ownedQuantity: number;
+  completed: boolean;
+  ownedSource: "tree" | "global" | null;
+  recipeId: string;
+  children: DivineBookTreeNode[];
+}
+
+export interface DivineBookListEntry {
+  itemId: string;
+  name: string;
+  type: "divine-book" | "material";
+  level: number | null;
+  icon: string;
+  requiredQuantity: number;
+  ownedQuantity: number;
+  missingQuantity: number;
 }

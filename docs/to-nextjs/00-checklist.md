@@ -70,18 +70,18 @@ Use este arquivo para rastrear o progresso do refactor.
 
 ## Fase 5 — Feature: Livros Divinos
 
-- [ ] Criar `src/types/divine-books.ts`
+- [x] Criar `src/types/divine-books.ts`
 - [x] Migrar calculadora para `src/lib/calculators/divine-books.js`
-- [ ] Criar `src/lib/queries/divine-books.ts`
+- [x] Criar `src/lib/queries/divine-books.ts`
 - [ ] Criar `src/hooks/useDivineBooks.ts`
-- [ ] Criar `src/stores/divine-books.store.ts`
+- [x] Criar `src/stores/divine-books.store.ts`
 - [x] Criar `src/app/divine-books/page.tsx`
 - [x] Criar `DivineBooksBrowser.tsx`
 - [x] Criar `DivineBookCard` dentro de `DivineBooksBrowser.tsx`
-- [ ] Criar `DivineBookFilters.tsx`
-- [ ] Criar `DivineBookMaterialsSummary.tsx`
-- [ ] Criar `DivineBookTreeView.tsx`
-- [ ] Testar calculadora com Vitest
+- [x] Criar `DivineBookFilters.tsx`
+- [x] Criar `DivineBookMaterialsSummary.tsx`
+- [x] Criar `DivineBookTreeView.tsx`
+- [x] Testar calculadora com Vitest
 
 ---
 
