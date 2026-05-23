@@ -41,13 +41,45 @@ Optional, only when justified:
 Avoid unless explicitly requested:
 
 - React
-- Next.js
 - Vue
 - Svelte
-- Backend APIs
 - Firebase
-- Supabase
 - Runtime server dependencies
+
+> **Nota de migração:** Next.js e Supabase são permitidos e documentados em `docs/to-nextjs/`.
+> Consulte o checklist em `docs/to-nextjs/00-checklist.md` antes de iniciar qualquer refactor.
+
+---
+
+## Agent Capabilities
+
+### Skills disponíveis
+
+Use as skills abaixo quando trabalhar com Next.js ou Tailwind.
+Para carregar uma skill, o agente deve usar `read_file` no caminho indicado.
+
+| Skill                          | Quando usar                                                                                                                      |
+| ------------------------------ | -------------------------------------------------------------------------------------------------------------------------------- |
+| `next-best-practices`          | Convenções de arquivos, RSC boundaries, data fetching patterns, metadata, route handlers, otimização de imagem e fonte, bundling |
+| `next-cache-components`        | PPR, diretiva `use cache`, `cacheLife`, `cacheTag`, `updateTag` — Next.js 16+                                                    |
+| `tailwind-v4-3-best-practices` | Criar, revisar ou corrigir código com Tailwind CSS v4.3: CSS-first config, design tokens, responsividade, performance            |
+
+> Ao criar ou revisar páginas, componentes ou configuração do projeto Next.js,
+> **sempre carregue a skill `next-best-practices` primeiro**.
+>
+> Ao usar Tailwind v4, **sempre carregue a skill `tailwind-v4-3-best-practices` primeiro**.
+
+---
+
+### MCPs disponíveis
+
+| MCP                 | Ferramentas                                                                                                                                          | Quando usar                                                                             |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| **next-devtools**   | `nextjs_docs`, `nextjs_call`, `browser_eval`, `enable_cache_components`, `upgrade_nextjs_16`                                                         | Consultar docs Next.js, inspecionar rotas, testar APIs internas, upgrade de versão      |
+| **tailwindcss**     | `search_tailwind_docs`, `get_tailwind_doc_page`, `list_tailwind_pages`, `get_tailwind_cache_status`, `force_revalidate_tailwind_cache`               | Consultar documentação do Tailwind v4, buscar utilitários, checar cache                 |
+| **chrome-devtools** | `take_screenshot`, `navigate_page`, `evaluate_script`, `lighthouse_audit`, `get_console_message`, `list_network_requests`, `performance_start_trace` | Inspecionar UI no browser, auditar performance/acessibilidade, depurar erros de runtime |
+
+> Os MCPs são ferramentas **diferidas** — devem ser carregados via `tool_search` antes de serem chamados.
 
 ---
 
@@ -545,7 +577,7 @@ When rendering icons from LiteDom string components, use the shared UI icon rend
 ```js
 import { Icon } from "./components/ui/Icon.js";
 
-Icon({ icon: Search })
+Icon({ icon: Search });
 ```
 
 Prefer Lucide icons inside icon buttons, select chevrons, selected-state checks, dropdown actions, tabs, toggles, and modal close buttons whenever an icon exists.
@@ -621,13 +653,15 @@ Components should use semantic tokens instead of hardcoded palette choices whene
 Prefer this:
 
 ```html
-<section class="bg-[var(--color-surface)] text-[var(--color-text)] border border-[var(--color-border)]">
+<section
+  class="bg-[var(--color-surface)] text-[var(--color-text)] border border-[var(--color-border)]"
+></section>
 ```
 
 Avoid this:
 
 ```html
-<section class="bg-slate-900 text-slate-100 border-slate-700">
+<section class="bg-slate-900 text-slate-100 border-slate-700"></section>
 ```
 
 Keep layout, spacing, and component behavior stable across style presets.
@@ -717,9 +751,9 @@ Do not hardcode visible strings inside components when they can come from the tr
 Use stable English translation keys:
 
 ```js
-t("nav.dusk")
-t("filters.equipmentType")
-t("calculator.missingMaterials")
+t("nav.dusk");
+t("filters.equipmentType");
+t("calculator.missingMaterials");
 ```
 
 Keep translation values in locale files such as:
@@ -747,8 +781,8 @@ await i18next.use(LanguageDetector).init({
   resources: {
     "pt-BR": { translation: ptBR },
     "en-US": { translation: enUS },
-    "es-ES": { translation: esES }
-  }
+    "es-ES": { translation: esES },
+  },
 });
 
 export const t = i18next.t;
@@ -772,12 +806,15 @@ Usage with LiteDom:
 ```js
 import { t } from "../i18n/index.js";
 
-component("#app", () => `
+component(
+  "#app",
+  () => `
   <nav>
     <a href="#/dusk">${t("nav.dusk")}</a>
     <a href="#/equipments">${t("nav.equipments")}</a>
   </nav>
-`);
+`,
+);
 ```
 
 The app should be able to receive additional translations without changing component logic.
@@ -785,13 +822,13 @@ The app should be able to receive additional translations without changing compo
 Prefer this:
 
 ```js
-buttonLabel: t("actions.search")
+buttonLabel: t("actions.search");
 ```
 
 Avoid this:
 
 ```js
-buttonLabel: "Buscar"
+buttonLabel: "Buscar";
 ```
 
 Game data names may stay in the source language used by the data file, but UI labels around them must use the translation layer.
