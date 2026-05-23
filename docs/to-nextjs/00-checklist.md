@@ -6,13 +6,13 @@ Use este arquivo para rastrear o progresso do refactor.
 
 ## Fase 1 — Setup
 
-- [ ] Rodar `npx create-next-app@latest perfect-world-helper --typescript --tailwind --eslint --app --import-alias "@/*"`
-- [ ] Atualizar Tailwind para v4 (`@tailwindcss/postcss`) — já incluso no Next.js 16
-- [ ] Instalar dependências de produção (Supabase, TanStack Query, Zustand, next-intl, next-themes, lucide-react)
-- [ ] Configurar `.env.local`
-- [ ] Configurar `next.config.ts`
+- [x] Criar base Next.js na raiz do projeto (`src/app`, TypeScript, Tailwind v4, App Router)
+- [x] Atualizar Tailwind para v4 (`@tailwindcss/postcss`)
+- [x] Instalar dependências de produção usadas nesta etapa (`next`, `react`, `react-dom`, `lucide-react`)
+- [x] Configurar `.env` com variáveis públicas do Supabase
+- [x] Configurar `next.config.ts`
 - [ ] Criar projeto no Supabase (região São Paulo)
-- [ ] Copiar `public/assets/` do projeto atual
+- [x] Copiar/reutilizar `public/assets/` do projeto atual
 
 ---
 
@@ -23,8 +23,8 @@ Use este arquivo para rastrear o progresso do refactor.
 - [ ] Rodar migration `003_create_dusk_drops.sql`
 - [ ] Rodar migration `004_create_equipments.sql`
 - [ ] Rodar migration `005_create_stones.sql`
-- [ ] Criar script `scripts/seed-supabase.ts`
-- [ ] Rodar seed com dados de `divine-books.json` ← aguardando SUPABASE_SERVICE_ROLE_KEY
+- [x] Criar script `scripts/seed-divine-books.mjs`
+- [x] Rodar seed com dados de `divine-books.json`
 - [ ] Rodar seed com dados de `dusk-drops.json`
 - [ ] Rodar seed com dados de `equipments.json`
 - [ ] Rodar seed com dados de `stones.json`
@@ -34,16 +34,16 @@ Use este arquivo para rastrear o progresso do refactor.
 
 ## Fase 3 — Infraestrutura da app
 
-- [ ] Criar `src/lib/supabase/client.ts`
-- [ ] Criar `src/lib/supabase/server.ts`
+- [x] Criar `src/lib/supabase/client.ts`
+- [x] Criar `src/lib/supabase/server.ts`
 - [ ] Criar `src/providers/QueryProvider.tsx`
 - [ ] Criar `src/providers/ThemeProvider.tsx`
 - [ ] Criar `src/i18n/routing.ts`
 - [ ] Criar `src/i18n/request.ts`
 - [ ] Criar `src/middleware.ts`
 - [ ] Copiar e adaptar locale files para `src/i18n/locales/`
-- [ ] Criar `src/app/[locale]/layout.tsx` com todos os providers
-- [ ] Configurar CSS variables em `src/app/globals.css`
+- [x] Criar `src/app/layout.tsx` com shell da aplicação
+- [x] Configurar CSS variables em `src/app/globals.css`
 - [ ] Criar `src/stores/app.store.ts`
 - [ ] Criar script anti-FOUC no layout
 
@@ -71,13 +71,13 @@ Use este arquivo para rastrear o progresso do refactor.
 ## Fase 5 — Feature: Livros Divinos
 
 - [ ] Criar `src/types/divine-books.ts`
-- [ ] Migrar calculadora para `src/lib/calculators/divine-books.ts`
+- [x] Migrar calculadora para `src/lib/calculators/divine-books.js`
 - [ ] Criar `src/lib/queries/divine-books.ts`
 - [ ] Criar `src/hooks/useDivineBooks.ts`
 - [ ] Criar `src/stores/divine-books.store.ts`
-- [ ] Criar `app/[locale]/divine-books/page.tsx`
-- [ ] Criar `DivineBooksBrowser.tsx`
-- [ ] Criar `DivineBookCard.tsx`
+- [x] Criar `src/app/divine-books/page.tsx`
+- [x] Criar `DivineBooksBrowser.tsx`
+- [x] Criar `DivineBookCard` dentro de `DivineBooksBrowser.tsx`
 - [ ] Criar `DivineBookFilters.tsx`
 - [ ] Criar `DivineBookMaterialsSummary.tsx`
 - [ ] Criar `DivineBookTreeView.tsx`
@@ -129,8 +129,8 @@ Use este arquivo para rastrear o progresso do refactor.
 
 ## Fase 9 — Qualidade e deploy
 
-- [ ] Rodar `npm run build` sem erros
-- [ ] Rodar `npm run test:run` — todos os testes passando
+- [x] Rodar `npm run build` sem erros
+- [x] Rodar `npm run test:run` — todos os testes passando
 - [ ] Verificar acessibilidade (teclado, aria, contraste)
 - [ ] Verificar responsividade (mobile, tablet, desktop)
 - [ ] Verificar troca de idioma funcionando

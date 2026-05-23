@@ -1,0 +1,2578 @@
+{
+  "schemaVersion": 1,
+  "feature": "divine-books",
+  "tabs": [
+    {
+      "id": "divine-books-tab-1",
+      "label": "Aba I",
+      "sortOrder": 1
+    },
+    {
+      "id": "divine-books-tab-2",
+      "label": "Aba II",
+      "sortOrder": 2
+    },
+    {
+      "id": "divine-books-tab-3",
+      "label": "Aba III",
+      "sortOrder": 3
+    },
+    {
+      "id": "divine-books-tab-4",
+      "label": "Aba IV",
+      "sortOrder": 4
+    },
+    {
+      "id": "divine-books-tab-5",
+      "label": "Aba V",
+      "sortOrder": 5
+    },
+    {
+      "id": "divine-books-tab-6",
+      "label": "Aba VI",
+      "sortOrder": 6
+    },
+    {
+      "id": "divine-books-tab-7",
+      "label": "Aba VII",
+      "sortOrder": 7
+    }
+  ],
+  "items": [
+    {
+      "id": "divine-book-poder-interno",
+      "type": "divine-book",
+      "name": "Poder Interno",
+      "level": 1,
+      "icon": "assets/divine-books/1-5.png",
+      "effects": [
+        "For +5"
+      ],
+      "tabs": [
+        "divine-books-tab-1"
+      ]
+    },
+    {
+      "id": "divine-book-favor-do-imperador",
+      "type": "divine-book",
+      "name": "Favor do Imperador",
+      "level": 1,
+      "icon": "assets/divine-books/2-5.png",
+      "effects": [
+        "Dex +5"
+      ],
+      "tabs": [
+        "divine-books-tab-1"
+      ]
+    },
+    {
+      "id": "divine-book-orgulho-paterno",
+      "type": "divine-book",
+      "name": "Orgulho Paterno",
+      "level": 1,
+      "icon": "assets/divine-books/3-6.jpg",
+      "effects": [
+        "Con +5"
+      ],
+      "tabs": [
+        "divine-books-tab-1"
+      ]
+    },
+    {
+      "id": "divine-book-sorriso-da-flora",
+      "type": "divine-book",
+      "name": "Sorriso da Flora",
+      "level": 1,
+      "icon": "assets/divine-books/4-3.png",
+      "effects": [
+        "Int +5"
+      ],
+      "tabs": [
+        "divine-books-tab-1"
+      ]
+    },
+    {
+      "id": "divine-book-escudo-primo",
+      "type": "divine-book",
+      "name": "Escudo Primo",
+      "level": 1,
+      "icon": "assets/divine-books/5-3.png",
+      "effects": [
+        "For +4",
+        "Con +3"
+      ],
+      "tabs": [
+        "divine-books-tab-1"
+      ]
+    },
+    {
+      "id": "divine-book-pessegueiro",
+      "type": "divine-book",
+      "name": "Pessegueiro",
+      "level": 1,
+      "icon": "assets/divine-books/6-3.png",
+      "effects": [
+        "Dex +4",
+        "Con +3"
+      ],
+      "tabs": [
+        "divine-books-tab-1"
+      ]
+    },
+    {
+      "id": "divine-book-chama-karmica",
+      "type": "divine-book",
+      "name": "Chama Kármica",
+      "level": 1,
+      "icon": "assets/divine-books/7-1.png",
+      "effects": [
+        "Int +4",
+        "Con +3"
+      ],
+      "tabs": [
+        "divine-books-tab-1"
+      ]
+    },
+    {
+      "id": "divine-book-rio-de-sangue",
+      "type": "divine-book",
+      "name": "Rio de Sangue",
+      "level": 1,
+      "icon": "assets/divine-books/8-1.png",
+      "effects": [
+        "Recup. HP +3",
+        "Exp +1%"
+      ],
+      "tabs": [
+        "divine-books-tab-1"
+      ]
+    },
+    {
+      "id": "divine-book-lua-na-noite-em-chamas",
+      "type": "divine-book",
+      "name": "Lua na Noite em Chamas",
+      "level": 1,
+      "icon": "assets/divine-books/9-1.png",
+      "effects": [
+        "Recup. MP +3",
+        "Exp +1%"
+      ],
+      "tabs": [
+        "divine-books-tab-1"
+      ]
+    },
+    {
+      "id": "divine-book-resiliencia",
+      "type": "divine-book",
+      "name": "Resiliência",
+      "level": 2,
+      "icon": "assets/divine-books/10-1.png",
+      "effects": [
+        "For +10"
+      ],
+      "tabs": [
+        "divine-books-tab-2"
+      ]
+    },
+    {
+      "id": "divine-book-flor-do-pessegueiro",
+      "type": "divine-book",
+      "name": "Flor do Pessegueiro",
+      "level": 2,
+      "icon": "assets/divine-books/11-1.png",
+      "effects": [
+        "Dex +10"
+      ],
+      "tabs": [
+        "divine-books-tab-2"
+      ]
+    },
+    {
+      "id": "divine-book-estampido",
+      "type": "divine-book",
+      "name": "Estampido",
+      "level": 2,
+      "icon": "assets/divine-books/12-2.png",
+      "effects": [
+        "Con +10"
+      ],
+      "tabs": [
+        "divine-books-tab-2"
+      ]
+    },
+    {
+      "id": "divine-book-chamas-secretas",
+      "type": "divine-book",
+      "name": "Chamas Secretas",
+      "level": 2,
+      "icon": "assets/divine-books/13.png",
+      "effects": [
+        "Int +10"
+      ],
+      "tabs": [
+        "divine-books-tab-2"
+      ]
+    },
+    {
+      "id": "divine-book-forca-inigualavel",
+      "type": "divine-book",
+      "name": "Força Inigualável",
+      "level": 2,
+      "icon": "assets/divine-books/14-1.png",
+      "effects": [
+        "For +7",
+        "Con +6"
+      ],
+      "tabs": [
+        "divine-books-tab-2"
+      ]
+    },
+    {
+      "id": "divine-book-chuva-de-petalas",
+      "type": "divine-book",
+      "name": "Chuva de Pétalas",
+      "level": 2,
+      "icon": "assets/divine-books/15-1.png",
+      "effects": [
+        "Dex +7",
+        "Con +6"
+      ],
+      "tabs": [
+        "divine-books-tab-2"
+      ]
+    },
+    {
+      "id": "divine-book-lotus-vermelha",
+      "type": "divine-book",
+      "name": "Lótus Vermelha",
+      "level": 2,
+      "icon": "assets/divine-books/16.png",
+      "effects": [
+        "Int +7",
+        "Con +6"
+      ],
+      "tabs": [
+        "divine-books-tab-2"
+      ]
+    },
+    {
+      "id": "divine-book-lobo-da-guerra",
+      "type": "divine-book",
+      "name": "Lobo da Guerra",
+      "level": 2,
+      "icon": "assets/divine-books/17.png",
+      "effects": [
+        "Recup. HP +6",
+        "Exp +2%"
+      ],
+      "tabs": [
+        "divine-books-tab-2"
+      ]
+    },
+    {
+      "id": "divine-book-renascido-das-chamas",
+      "type": "divine-book",
+      "name": "Renascido das Chamas",
+      "level": 2,
+      "icon": "assets/divine-books/18.png",
+      "effects": [
+        "Recup. MP +6",
+        "Exp +2%"
+      ],
+      "tabs": [
+        "divine-books-tab-2"
+      ]
+    },
+    {
+      "id": "divine-book-portal-do-yang",
+      "type": "divine-book",
+      "name": "Portal do Yang",
+      "level": 3,
+      "icon": "assets/divine-books/19.png",
+      "effects": [
+        "For +15"
+      ],
+      "tabs": [
+        "divine-books-tab-3"
+      ]
+    },
+    {
+      "id": "divine-book-beleza-sem-forma",
+      "type": "divine-book",
+      "name": "Beleza sem Forma",
+      "level": 3,
+      "icon": "assets/divine-books/20.jpg",
+      "effects": [
+        "Dex +15"
+      ],
+      "tabs": [
+        "divine-books-tab-3"
+      ]
+    },
+    {
+      "id": "divine-book-som-do-arrependimento",
+      "type": "divine-book",
+      "name": "Som do Arrependimento",
+      "level": 3,
+      "icon": "assets/divine-books/21.png",
+      "effects": [
+        "Con +15"
+      ],
+      "tabs": [
+        "divine-books-tab-3"
+      ]
+    },
+    {
+      "id": "divine-book-coracao-leal-de-gelo",
+      "type": "divine-book",
+      "name": "Coração Leal de Gelo",
+      "level": 3,
+      "icon": "assets/divine-books/22.png",
+      "effects": [
+        "Int +15"
+      ],
+      "tabs": [
+        "divine-books-tab-3"
+      ]
+    },
+    {
+      "id": "divine-book-cancao-do-vinho",
+      "type": "divine-book",
+      "name": "Canção do Vinho",
+      "level": 3,
+      "icon": "assets/divine-books/23.png",
+      "effects": [
+        "For +9",
+        "Con +8"
+      ],
+      "tabs": [
+        "divine-books-tab-3"
+      ]
+    },
+    {
+      "id": "divine-book-crepusculo-eterno",
+      "type": "divine-book",
+      "name": "Crepúsculo Eterno",
+      "level": 3,
+      "icon": "assets/divine-books/24.png",
+      "effects": [
+        "Dex +9",
+        "Con +8"
+      ],
+      "tabs": [
+        "divine-books-tab-3"
+      ]
+    },
+    {
+      "id": "divine-book-chama-rubra",
+      "type": "divine-book",
+      "name": "Chama Rubra",
+      "level": 3,
+      "icon": "assets/divine-books/25.png",
+      "effects": [
+        "Int +9",
+        "Con +8"
+      ],
+      "tabs": [
+        "divine-books-tab-3"
+      ]
+    },
+    {
+      "id": "divine-book-aniquilacao",
+      "type": "divine-book",
+      "name": "Aniquilação",
+      "level": 3,
+      "icon": "assets/divine-books/26.png",
+      "effects": [
+        "Recup. HP +9",
+        "Exp +3%"
+      ],
+      "tabs": [
+        "divine-books-tab-3"
+      ]
+    },
+    {
+      "id": "divine-book-fragrancia-da-chuva-de-sangue",
+      "type": "divine-book",
+      "name": "Fragrância da Chuva de Sangue",
+      "level": 3,
+      "icon": "assets/divine-books/27.png",
+      "effects": [
+        "Recup. MP +9",
+        "Exp +3%"
+      ],
+      "tabs": [
+        "divine-books-tab-3"
+      ]
+    },
+    {
+      "id": "divine-book-destino",
+      "type": "divine-book",
+      "name": "Destino",
+      "level": 4,
+      "icon": "assets/divine-books/28.png",
+      "effects": [
+        "For +20"
+      ],
+      "tabs": [
+        "divine-books-tab-4"
+      ]
+    },
+    {
+      "id": "divine-book-espinhos-de-rosa",
+      "type": "divine-book",
+      "name": "Espinhos de Rosa",
+      "level": 4,
+      "icon": "assets/divine-books/29.png",
+      "effects": [
+        "Dex +20"
+      ],
+      "tabs": [
+        "divine-books-tab-4"
+      ]
+    },
+    {
+      "id": "divine-book-anarquia",
+      "type": "divine-book",
+      "name": "Anarquia",
+      "level": 4,
+      "icon": "assets/divine-books/30.png",
+      "effects": [
+        "Con +20"
+      ],
+      "tabs": [
+        "divine-books-tab-4"
+      ]
+    },
+    {
+      "id": "divine-book-tocado-pelo-vento-da-primavera",
+      "type": "divine-book",
+      "name": "Tocado Pelo Vento da Primavera",
+      "level": 4,
+      "icon": "assets/divine-books/31.png",
+      "effects": [
+        "Int +20"
+      ],
+      "tabs": [
+        "divine-books-tab-4"
+      ]
+    },
+    {
+      "id": "divine-book-tigre-do-vento-dragao-do-ceu",
+      "type": "divine-book",
+      "name": "Tigre do Vento, Dragão do Céu",
+      "level": 4,
+      "icon": "assets/divine-books/32.png",
+      "effects": [
+        "For +13",
+        "Con +12"
+      ],
+      "tabs": [
+        "divine-books-tab-4"
+      ]
+    },
+    {
+      "id": "divine-book-encantador-de-almas",
+      "type": "divine-book",
+      "name": "Encantador de Almas",
+      "level": 4,
+      "icon": "assets/divine-books/33.png",
+      "effects": [
+        "Dex +13",
+        "Con +12"
+      ],
+      "tabs": [
+        "divine-books-tab-4"
+      ]
+    },
+    {
+      "id": "divine-book-paixao",
+      "type": "divine-book",
+      "name": "Paixão",
+      "level": 4,
+      "icon": "assets/divine-books/34.png",
+      "effects": [
+        "Int +13",
+        "Con +12"
+      ],
+      "tabs": [
+        "divine-books-tab-4"
+      ]
+    },
+    {
+      "id": "divine-book-ao-sul-dos-rios",
+      "type": "divine-book",
+      "name": "Ao Sul dos Rios",
+      "level": 5,
+      "icon": "assets/divine-books/35.png",
+      "effects": [
+        "Recup. HP +12",
+        "Exp +4%"
+      ],
+      "tabs": [
+        "divine-books-tab-4"
+      ]
+    },
+    {
+      "id": "divine-book-ceu-que-chora",
+      "type": "divine-book",
+      "name": "Céu Que Chora",
+      "level": 4,
+      "icon": "assets/divine-books/36.png",
+      "effects": [
+        "Recup. MP +12",
+        "Exp +4%"
+      ],
+      "tabs": [
+        "divine-books-tab-4"
+      ]
+    },
+    {
+      "id": "divine-book-beleza-da-serpente",
+      "type": "divine-book",
+      "name": "Beleza da Serpente",
+      "level": 5,
+      "icon": "assets/divine-books/37.png",
+      "effects": [
+        "For +20",
+        "Mov. +0.1m/s"
+      ],
+      "tabs": [
+        "divine-books-tab-5"
+      ]
+    },
+    {
+      "id": "divine-book-os-quatro-grande-elementos",
+      "type": "divine-book",
+      "name": "Os Quatro Grande Elementos",
+      "level": 5,
+      "icon": "assets/divine-books/38.png",
+      "effects": [
+        "For +20",
+        "Crítico +1%"
+      ],
+      "tabs": [
+        "divine-books-tab-5"
+      ]
+    },
+    {
+      "id": "divine-book-partindo-os-ceus-e-a-terra",
+      "type": "divine-book",
+      "name": "Partindo os Céus e a Terra",
+      "level": 5,
+      "icon": "assets/divine-books/39.png",
+      "effects": [
+        "Dex +25"
+      ],
+      "tabs": [
+        "divine-books-tab-5"
+      ]
+    },
+    {
+      "id": "divine-book-cidade-estrangeira",
+      "type": "divine-book",
+      "name": "Cidade Estrangeira",
+      "level": 5,
+      "icon": "assets/divine-books/40.png",
+      "effects": [
+        "Dex +20",
+        "Crítico +1%"
+      ],
+      "tabs": [
+        "divine-books-tab-5"
+      ]
+    },
+    {
+      "id": "divine-book-risada-da-loucura",
+      "type": "divine-book",
+      "name": "Risada da Loucura",
+      "level": 5,
+      "icon": "assets/divine-books/41.png",
+      "effects": [
+        "Con +25"
+      ],
+      "tabs": [
+        "divine-books-tab-5",
+        "divine-books-tab-6"
+      ]
+    },
+    {
+      "id": "divine-book-bencaos-da-terra",
+      "type": "divine-book",
+      "name": "Bênçãos da Terra",
+      "level": 5,
+      "icon": "assets/divine-books/42.png",
+      "effects": [
+        "Con +20",
+        "Red. Dano Físico +3%"
+      ],
+      "tabs": [
+        "divine-books-tab-5",
+        "divine-books-tab-6"
+      ]
+    },
+    {
+      "id": "divine-book-uivo-do-mar",
+      "type": "divine-book",
+      "name": "Uivo do Mar",
+      "level": 5,
+      "icon": "assets/divine-books/43.png",
+      "effects": [
+        "Int +20",
+        "Mov. +0.1m/s"
+      ],
+      "tabs": [
+        "divine-books-tab-5",
+        "divine-books-tab-6"
+      ]
+    },
+    {
+      "id": "divine-book-agua-gentil",
+      "type": "divine-book",
+      "name": "Água Gentil",
+      "level": 5,
+      "icon": "assets/divine-books/44.png",
+      "effects": [
+        "Int +20",
+        "Crítico +1%"
+      ],
+      "tabs": [
+        "divine-books-tab-5",
+        "divine-books-tab-6"
+      ]
+    },
+    {
+      "id": "divine-book-arrogancia",
+      "type": "divine-book",
+      "name": "Arrogância",
+      "level": 5,
+      "icon": "assets/divine-books/45.png",
+      "effects": [
+        "For +13",
+        "Con +12",
+        "HP +70"
+      ],
+      "tabs": [
+        "divine-books-tab-5"
+      ]
+    },
+    {
+      "id": "divine-book-disfarce-de-sangue",
+      "type": "divine-book",
+      "name": "Disfarce de Sangue",
+      "level": 5,
+      "icon": "assets/divine-books/46.png",
+      "effects": [
+        "For +13",
+        "Con +12",
+        "Crítico +1%"
+      ],
+      "tabs": [
+        "divine-books-tab-5"
+      ]
+    },
+    {
+      "id": "divine-book-jupiter",
+      "type": "divine-book",
+      "name": "Júpiter",
+      "level": 5,
+      "icon": "assets/divine-books/47.png",
+      "effects": [
+        "Dex +13",
+        "Con +12",
+        "Mov. +0.1m/s"
+      ],
+      "tabs": [
+        "divine-books-tab-5"
+      ]
+    },
+    {
+      "id": "divine-book-floresta-vasta",
+      "type": "divine-book",
+      "name": "Floresta Vasta",
+      "level": 5,
+      "icon": "assets/divine-books/48.png",
+      "effects": [
+        "Dex +13",
+        "Con +12",
+        "Crítico +1%"
+      ],
+      "tabs": [
+        "divine-books-tab-5"
+      ]
+    },
+    {
+      "id": "divine-book-fonte-do-deserto",
+      "type": "divine-book",
+      "name": "Fonte do Deserto",
+      "level": 5,
+      "icon": "assets/divine-books/49.png",
+      "effects": [
+        "Int +13",
+        "Con +12",
+        "Mov. +0.1m/s"
+      ],
+      "tabs": [
+        "divine-books-tab-5"
+      ]
+    },
+    {
+      "id": "divine-book-fragrancia-dos-ceus",
+      "type": "divine-book",
+      "name": "Fragrância dos Céus",
+      "level": 5,
+      "icon": "assets/divine-books/50.png",
+      "effects": [
+        "Int +13",
+        "Con +12",
+        "Tempo de Invoc. -1%"
+      ],
+      "tabs": [
+        "divine-books-tab-5"
+      ]
+    },
+    {
+      "id": "divine-book-os-treze-guardioes",
+      "type": "divine-book",
+      "name": "Os Treze Guardiões",
+      "level": 5,
+      "icon": "assets/divine-books/51.png",
+      "effects": [
+        "For +9",
+        "Dex +9",
+        "Con +8",
+        "Int +9",
+        "HP +70"
+      ],
+      "tabs": [
+        "divine-books-tab-5"
+      ]
+    },
+    {
+      "id": "divine-book-espelho-do-nada",
+      "type": "divine-book",
+      "name": "Espelho do Nada",
+      "level": 5,
+      "icon": "assets/divine-books/52.png",
+      "effects": [
+        "For +9",
+        "Dex +9",
+        "Con +8",
+        "Int +9",
+        "Crítico +1"
+      ],
+      "tabs": [
+        "divine-books-tab-5"
+      ]
+    },
+    {
+      "id": "divine-book-canto-da-noite",
+      "type": "divine-book",
+      "name": "Canto da Noite",
+      "level": 7,
+      "icon": "assets/divine-books/cantodanoite.gif",
+      "effects": [
+        "For +13",
+        "Dex +13",
+        "Con +12",
+        "Int +13",
+        "Critico +1%",
+        "Tempo de Invoc. -1%",
+        "Vel. de Ataque -0,05"
+      ],
+      "tabs": [
+        "divine-books-tab-6"
+      ]
+    },
+    {
+      "id": "divine-book-trompete-de-ferro",
+      "type": "divine-book",
+      "name": "Trompete de Ferro",
+      "level": 7,
+      "icon": "assets/divine-books/trompetedeferro.gif",
+      "effects": [
+        "Int +45"
+      ],
+      "tabs": [
+        "divine-books-tab-6"
+      ]
+    },
+    {
+      "id": "divine-book-canto-de-dragao-da-agua",
+      "type": "divine-book",
+      "name": "Canto de Dragão da Água",
+      "level": 7,
+      "icon": "assets/divine-books/cantodedragdaagua.gif",
+      "effects": [
+        "Con +45"
+      ],
+      "tabs": [
+        "divine-books-tab-6"
+      ]
+    },
+    {
+      "id": "divine-book-uma-bela-flor",
+      "type": "divine-book",
+      "name": "Uma Bela Flor",
+      "level": 7,
+      "icon": "assets/divine-books/livrodivinovermelho.gif",
+      "effects": [
+        "Dex +25",
+        "Mov. +0,2m/s"
+      ],
+      "tabs": [
+        "divine-books-tab-6"
+      ]
+    },
+    {
+      "id": "divine-book-deus-eriang",
+      "type": "divine-book",
+      "name": "Deus Eriang",
+      "level": 7,
+      "icon": "assets/divine-books/DeusEriang.gif",
+      "effects": [
+        "Dex +25",
+        "Critico +2%"
+      ],
+      "tabs": [
+        "divine-books-tab-6"
+      ]
+    },
+    {
+      "id": "divine-book-tres-estudiosos",
+      "type": "divine-book",
+      "name": "Três Estudiosos",
+      "level": 7,
+      "icon": "assets/divine-books/livrodivinoverde.gif",
+      "effects": [
+        "For +45"
+      ],
+      "tabs": [
+        "divine-books-tab-6"
+      ]
+    },
+    {
+      "id": "divine-book-gelo-estrangeiro",
+      "type": "divine-book",
+      "name": "Gelo Estrangeiro",
+      "level": 6,
+      "icon": "assets/divine-books/geloestrangeiro.jpg",
+      "effects": [
+        "Int+35"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-hades-do-norte",
+      "type": "divine-book",
+      "name": "Hades do Norte",
+      "level": 6,
+      "icon": "assets/divine-books/hadesdonorte.jpg",
+      "effects": [
+        "Int+20 Mov.+0.2m/s"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-lagrima-vermelha",
+      "type": "divine-book",
+      "name": "Lágrima Vermelha",
+      "level": 6,
+      "icon": "assets/divine-books/lagrimavermelha.jpg",
+      "effects": [
+        "Con+20",
+        "Red. de Dano Físico 6%"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-agua-que-perfura-a-pedra",
+      "type": "divine-book",
+      "name": "Água que Perfura a Pedra",
+      "level": 6,
+      "icon": "assets/divine-books/aguaqueperfuraapedra.jpg",
+      "effects": [
+        "Con +20",
+        "Crítico +2%"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-vento-da-manha",
+      "type": "divine-book",
+      "name": "Vento da Manhã",
+      "level": 6,
+      "icon": "assets/divine-books/ventodamanha.jpg",
+      "effects": [
+        "Dex +35"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-passar-rio-com-palha",
+      "type": "divine-book",
+      "name": "Passar Rio Com Palha",
+      "level": 6,
+      "icon": "assets/divine-books/passarriocompalha.jpg",
+      "effects": [
+        "Dex +20",
+        "Mov. +0.2m/s"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-segurar-a-onda",
+      "type": "divine-book",
+      "name": "Segurar a Onda",
+      "level": 6,
+      "icon": "assets/divine-books/seguraraondaf.jpg",
+      "effects": [
+        "For+35"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-coracao-furioso",
+      "type": "divine-book",
+      "name": "Coração Furioso",
+      "level": 6,
+      "icon": "assets/divine-books/coracaofurioso.jpg",
+      "effects": [
+        "For +20",
+        "Crítico +2%"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-ritmo-das-ondas",
+      "type": "divine-book",
+      "name": "Ritmo das Ondas",
+      "level": 6,
+      "icon": "assets/divine-books/ritmodasondas.jpg",
+      "effects": [
+        "Int +13",
+        "Con +12",
+        "Tempo de Inv.-2%"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-tres-flores",
+      "type": "divine-book",
+      "name": "Três Flores",
+      "level": 6,
+      "icon": "assets/divine-books/tresflores.jpg",
+      "effects": [
+        "Int +13",
+        "Con +12",
+        "Crítico +2%"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-asa-unificadora",
+      "type": "divine-book",
+      "name": "Asa Unificadora",
+      "level": 6,
+      "icon": "assets/divine-books/asaunificadora.jpg",
+      "effects": [
+        "Dex +13",
+        "Con +12",
+        "Mov. +0.2m/s"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-zen-de-esquecimento",
+      "type": "divine-book",
+      "name": "Zen de Esquecimento",
+      "level": 6,
+      "icon": "assets/divine-books/zendeesquecimento.jpg",
+      "effects": [
+        "Dex +13",
+        "Con +12",
+        "HP +140"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-mudanca-do-ceu-e-da-terra",
+      "type": "divine-book",
+      "name": "Mudança do Céu e da Terra",
+      "level": 6,
+      "icon": "assets/divine-books/mudancadoceuedaterra.jpg",
+      "effects": [
+        "For +13",
+        "Con +12",
+        "Red. de Dano Físico +6%"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-sorriso-da-rainha",
+      "type": "divine-book",
+      "name": "Sorriso da Rainha",
+      "level": 6,
+      "icon": "assets/divine-books/sorrisodarainha.jpg",
+      "effects": [
+        "For +13",
+        "Con +12",
+        "Crítico +2%"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-dezoito-estudiosos",
+      "type": "divine-book",
+      "name": "Dezoito Estudiosos",
+      "level": 6,
+      "icon": "assets/divine-books/dezoitoestudiosos.jpg",
+      "effects": [
+        "For +9",
+        "Dex +9",
+        "Con +8",
+        "Int +9",
+        "HP +70",
+        "MP+80"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "divine-book-pan-gu",
+      "type": "divine-book",
+      "name": "Pan gu",
+      "level": 6,
+      "icon": "assets/divine-books/pangu.jpg",
+      "effects": [
+        "For +9",
+        "Dex +9",
+        "Con +8",
+        "Int +9",
+        "Crítico +1",
+        "Redução de Inv. -1%",
+        "Vel. de Ataque -0.05"
+      ],
+      "tabs": [
+        "divine-books-tab-7"
+      ]
+    },
+    {
+      "id": "material-fragmentos-de-escrita-divina",
+      "type": "material",
+      "name": "Fragmentos de Escrita Divina",
+      "level": null,
+      "icon": "assets/divine-books/fragmentodeescritadivina.jpg",
+      "effects": [],
+      "tabs": []
+    },
+    {
+      "id": "material-livros-em-branco-divino",
+      "type": "material",
+      "name": "Livros em Branco Divino",
+      "level": null,
+      "icon": "assets/divine-books/0-0.png",
+      "effects": [],
+      "tabs": []
+    },
+    {
+      "id": "material-manuscrito-do-destino",
+      "type": "material",
+      "name": "Manuscrito do Destino",
+      "level": null,
+      "icon": "assets/divine-books/ManuscritoDoDestino.jpg",
+      "effects": [],
+      "tabs": []
+    },
+    {
+      "id": "material-pergaminho-dos-deuses",
+      "type": "material",
+      "name": "Pergaminho dos deuses",
+      "level": null,
+      "icon": "assets/divine-books/pergaminhodosdeuses-1.gif",
+      "effects": [],
+      "tabs": []
+    }
+  ],
+  "recipes": [
+    {
+      "id": "recipe-divine-books-tab-1-poder-interno-1",
+      "resultItemId": "divine-book-poder-interno",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-1",
+      "materials": [
+        {
+          "itemId": "material-fragmentos-de-escrita-divina",
+          "quantity": 3
+        },
+        {
+          "itemId": "material-livros-em-branco-divino",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-1-favor-do-imperador-1",
+      "resultItemId": "divine-book-favor-do-imperador",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-1",
+      "materials": [
+        {
+          "itemId": "material-fragmentos-de-escrita-divina",
+          "quantity": 3
+        },
+        {
+          "itemId": "material-livros-em-branco-divino",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-1-orgulho-paterno-1",
+      "resultItemId": "divine-book-orgulho-paterno",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-1",
+      "materials": [
+        {
+          "itemId": "material-fragmentos-de-escrita-divina",
+          "quantity": 3
+        },
+        {
+          "itemId": "material-livros-em-branco-divino",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-1-sorriso-da-flora-1",
+      "resultItemId": "divine-book-sorriso-da-flora",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-1",
+      "materials": [
+        {
+          "itemId": "material-fragmentos-de-escrita-divina",
+          "quantity": 3
+        },
+        {
+          "itemId": "material-livros-em-branco-divino",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-1-escudo-primo-1",
+      "resultItemId": "divine-book-escudo-primo",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-1",
+      "materials": [
+        {
+          "itemId": "material-fragmentos-de-escrita-divina",
+          "quantity": 3
+        },
+        {
+          "itemId": "material-livros-em-branco-divino",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-1-pessegueiro-1",
+      "resultItemId": "divine-book-pessegueiro",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-1",
+      "materials": [
+        {
+          "itemId": "material-fragmentos-de-escrita-divina",
+          "quantity": 3
+        },
+        {
+          "itemId": "material-livros-em-branco-divino",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-1-chama-karmica-1",
+      "resultItemId": "divine-book-chama-karmica",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-1",
+      "materials": [
+        {
+          "itemId": "material-fragmentos-de-escrita-divina",
+          "quantity": 3
+        },
+        {
+          "itemId": "material-livros-em-branco-divino",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-1-rio-de-sangue-1",
+      "resultItemId": "divine-book-rio-de-sangue",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-1",
+      "materials": [
+        {
+          "itemId": "material-fragmentos-de-escrita-divina",
+          "quantity": 3
+        },
+        {
+          "itemId": "material-livros-em-branco-divino",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-1-lua-na-noite-em-chamas-1",
+      "resultItemId": "divine-book-lua-na-noite-em-chamas",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-1",
+      "materials": [
+        {
+          "itemId": "material-fragmentos-de-escrita-divina",
+          "quantity": 3
+        },
+        {
+          "itemId": "material-livros-em-branco-divino",
+          "quantity": 4
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-2-resiliencia-1",
+      "resultItemId": "divine-book-resiliencia",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-2",
+      "materials": [
+        {
+          "itemId": "divine-book-poder-interno",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-escudo-primo",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chama-karmica",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-2-flor-do-pessegueiro-1",
+      "resultItemId": "divine-book-flor-do-pessegueiro",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-2",
+      "materials": [
+        {
+          "itemId": "divine-book-favor-do-imperador",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-pessegueiro",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-sorriso-da-flora",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-2-estampido-1",
+      "resultItemId": "divine-book-estampido",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-2",
+      "materials": [
+        {
+          "itemId": "divine-book-orgulho-paterno",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-escudo-primo",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chama-karmica",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-2-chamas-secretas-1",
+      "resultItemId": "divine-book-chamas-secretas",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-2",
+      "materials": [
+        {
+          "itemId": "divine-book-poder-interno",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chama-karmica",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-sorriso-da-flora",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-2-forca-inigualavel-1",
+      "resultItemId": "divine-book-forca-inigualavel",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-2",
+      "materials": [
+        {
+          "itemId": "divine-book-poder-interno",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-orgulho-paterno",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-escudo-primo",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-2-chuva-de-petalas-1",
+      "resultItemId": "divine-book-chuva-de-petalas",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-2",
+      "materials": [
+        {
+          "itemId": "divine-book-favor-do-imperador",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-orgulho-paterno",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-pessegueiro",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-2-lotus-vermelha-1",
+      "resultItemId": "divine-book-lotus-vermelha",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-2",
+      "materials": [
+        {
+          "itemId": "divine-book-sorriso-da-flora",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chama-karmica",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-pessegueiro",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-2-lobo-da-guerra-1",
+      "resultItemId": "divine-book-lobo-da-guerra",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-2",
+      "materials": [
+        {
+          "itemId": "divine-book-escudo-primo",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chama-karmica",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-rio-de-sangue",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-2-renascido-das-chamas-1",
+      "resultItemId": "divine-book-renascido-das-chamas",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-2",
+      "materials": [
+        {
+          "itemId": "divine-book-sorriso-da-flora",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chama-karmica",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-lua-na-noite-em-chamas",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-3-portal-do-yang-1",
+      "resultItemId": "divine-book-portal-do-yang",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-3",
+      "materials": [
+        {
+          "itemId": "divine-book-resiliencia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-forca-inigualavel",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-lotus-vermelha",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-3-beleza-sem-forma-1",
+      "resultItemId": "divine-book-beleza-sem-forma",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-3",
+      "materials": [
+        {
+          "itemId": "divine-book-flor-do-pessegueiro",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-forca-inigualavel",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chuva-de-petalas",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-3-som-do-arrependimento-1",
+      "resultItemId": "divine-book-som-do-arrependimento",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-3",
+      "materials": [
+        {
+          "itemId": "divine-book-estampido",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-forca-inigualavel",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-lotus-vermelha",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-3-coracao-leal-de-gelo-1",
+      "resultItemId": "divine-book-coracao-leal-de-gelo",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-3",
+      "materials": [
+        {
+          "itemId": "divine-book-resiliencia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-flor-do-pessegueiro",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chamas-secretas",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-3-cancao-do-vinho-1",
+      "resultItemId": "divine-book-cancao-do-vinho",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-3",
+      "materials": [
+        {
+          "itemId": "divine-book-estampido",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-lotus-vermelha",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-forca-inigualavel",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-3-crepusculo-eterno-1",
+      "resultItemId": "divine-book-crepusculo-eterno",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-3",
+      "materials": [
+        {
+          "itemId": "divine-book-flor-do-pessegueiro",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-estampido",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chuva-de-petalas",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-3-chama-rubra-1",
+      "resultItemId": "divine-book-chama-rubra",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-3",
+      "materials": [
+        {
+          "itemId": "divine-book-chamas-secretas",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chuva-de-petalas",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-lotus-vermelha",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-3-aniquilacao-1",
+      "resultItemId": "divine-book-aniquilacao",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-3",
+      "materials": [
+        {
+          "itemId": "divine-book-resiliencia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chuva-de-petalas",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-lobo-da-guerra",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-3-fragrancia-da-chuva-de-sangue-1",
+      "resultItemId": "divine-book-fragrancia-da-chuva-de-sangue",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-3",
+      "materials": [
+        {
+          "itemId": "divine-book-chuva-de-petalas",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-lotus-vermelha",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-renascido-das-chamas",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-4-destino-1",
+      "resultItemId": "divine-book-destino",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-4",
+      "materials": [
+        {
+          "itemId": "divine-book-portal-do-yang",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-beleza-sem-forma",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-cancao-do-vinho",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-4-espinhos-de-rosa-1",
+      "resultItemId": "divine-book-espinhos-de-rosa",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-4",
+      "materials": [
+        {
+          "itemId": "divine-book-beleza-sem-forma",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chama-rubra",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-crepusculo-eterno",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-4-anarquia-1",
+      "resultItemId": "divine-book-anarquia",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-4",
+      "materials": [
+        {
+          "itemId": "divine-book-som-do-arrependimento",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-cancao-do-vinho",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-coracao-leal-de-gelo",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-4-tocado-pelo-vento-da-primavera-1",
+      "resultItemId": "divine-book-tocado-pelo-vento-da-primavera",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-4",
+      "materials": [
+        {
+          "itemId": "divine-book-som-do-arrependimento",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chama-rubra",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-coracao-leal-de-gelo",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-4-tigre-do-vento-dragao-do-ceu-1",
+      "resultItemId": "divine-book-tigre-do-vento-dragao-do-ceu",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-4",
+      "materials": [
+        {
+          "itemId": "divine-book-portal-do-yang",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-crepusculo-eterno",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-cancao-do-vinho",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-4-encantador-de-almas-1",
+      "resultItemId": "divine-book-encantador-de-almas",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-4",
+      "materials": [
+        {
+          "itemId": "divine-book-beleza-sem-forma",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chama-rubra",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-crepusculo-eterno",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-4-paixao-1",
+      "resultItemId": "divine-book-paixao",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-4",
+      "materials": [
+        {
+          "itemId": "divine-book-coracao-leal-de-gelo",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-portal-do-yang",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-chama-rubra",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-4-ao-sul-dos-rios-1",
+      "resultItemId": "divine-book-ao-sul-dos-rios",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-4",
+      "materials": [
+        {
+          "itemId": "divine-book-chamas-secretas",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-flor-do-pessegueiro",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-aniquilacao",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-4-ceu-que-chora-1",
+      "resultItemId": "divine-book-ceu-que-chora",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-4",
+      "materials": [
+        {
+          "itemId": "divine-book-som-do-arrependimento",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-crepusculo-eterno",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-fragrancia-da-chuva-de-sangue",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-beleza-da-serpente-1",
+      "resultItemId": "divine-book-beleza-da-serpente",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-destino",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-anarquia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-encantador-de-almas",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-os-quatro-grande-elementos-1",
+      "resultItemId": "divine-book-os-quatro-grande-elementos",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-destino",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-anarquia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-tigre-do-vento-dragao-do-ceu",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-partindo-os-ceus-e-a-terra-1",
+      "resultItemId": "divine-book-partindo-os-ceus-e-a-terra",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-espinhos-de-rosa",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-anarquia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-encantador-de-almas",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-cidade-estrangeira-1",
+      "resultItemId": "divine-book-cidade-estrangeira",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-destino",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-espinhos-de-rosa",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-encantador-de-almas",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-risada-da-loucura-1",
+      "resultItemId": "divine-book-risada-da-loucura",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-tigre-do-vento-dragao-do-ceu",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-anarquia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-paixao",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-bencaos-da-terra-1",
+      "resultItemId": "divine-book-bencaos-da-terra",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-tigre-do-vento-dragao-do-ceu",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-anarquia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-paixao",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-uivo-do-mar-1",
+      "resultItemId": "divine-book-uivo-do-mar",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-espinhos-de-rosa",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-tocado-pelo-vento-da-primavera",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-encantador-de-almas",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-agua-gentil-1",
+      "resultItemId": "divine-book-agua-gentil",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-paixao",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-tocado-pelo-vento-da-primavera",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-tigre-do-vento-dragao-do-ceu",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-arrogancia-1",
+      "resultItemId": "divine-book-arrogancia",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-destino",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-anarquia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-tigre-do-vento-dragao-do-ceu",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-disfarce-de-sangue-1",
+      "resultItemId": "divine-book-disfarce-de-sangue",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-destino",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-anarquia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-tigre-do-vento-dragao-do-ceu",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-jupiter-1",
+      "resultItemId": "divine-book-jupiter",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-espinhos-de-rosa",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-anarquia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-encantador-de-almas",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-floresta-vasta-1",
+      "resultItemId": "divine-book-floresta-vasta",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-espinhos-de-rosa",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-anarquia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-encantador-de-almas",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-fonte-do-deserto-1",
+      "resultItemId": "divine-book-fonte-do-deserto",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-espinhos-de-rosa",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-paixao",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-tocado-pelo-vento-da-primavera",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-fragrancia-dos-ceus-1",
+      "resultItemId": "divine-book-fragrancia-dos-ceus",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-ceu-que-chora",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-paixao",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-tocado-pelo-vento-da-primavera",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-os-treze-guardioes-1",
+      "resultItemId": "divine-book-os-treze-guardioes",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-paixao",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-ao-sul-dos-rios",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-ceu-que-chora",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-5-espelho-do-nada-1",
+      "resultItemId": "divine-book-espelho-do-nada",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-5",
+      "materials": [
+        {
+          "itemId": "divine-book-paixao",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-ao-sul-dos-rios",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-ceu-que-chora",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-6-agua-gentil-2",
+      "resultItemId": "divine-book-agua-gentil",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-6",
+      "materials": [
+        {
+          "itemId": "material-manuscrito-do-destino",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-6-uivo-do-mar-2",
+      "resultItemId": "divine-book-uivo-do-mar",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-6",
+      "materials": [
+        {
+          "itemId": "material-manuscrito-do-destino",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-6-risada-da-loucura-2",
+      "resultItemId": "divine-book-risada-da-loucura",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-6",
+      "materials": [
+        {
+          "itemId": "material-manuscrito-do-destino",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-6-bencaos-da-terra-2",
+      "resultItemId": "divine-book-bencaos-da-terra",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-6",
+      "materials": [
+        {
+          "itemId": "material-manuscrito-do-destino",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-6-canto-da-noite-1",
+      "resultItemId": "divine-book-canto-da-noite",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-6",
+      "materials": [
+        {
+          "itemId": "material-pergaminho-dos-deuses",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-6-trompete-de-ferro-1",
+      "resultItemId": "divine-book-trompete-de-ferro",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-6",
+      "materials": [
+        {
+          "itemId": "material-pergaminho-dos-deuses",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-6-canto-de-dragao-da-agua-1",
+      "resultItemId": "divine-book-canto-de-dragao-da-agua",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-6",
+      "materials": [
+        {
+          "itemId": "material-pergaminho-dos-deuses",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-6-uma-bela-flor-1",
+      "resultItemId": "divine-book-uma-bela-flor",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-6",
+      "materials": [
+        {
+          "itemId": "material-pergaminho-dos-deuses",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-6-deus-eriang-1",
+      "resultItemId": "divine-book-deus-eriang",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-6",
+      "materials": [
+        {
+          "itemId": "material-pergaminho-dos-deuses",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-6-tres-estudiosos-1",
+      "resultItemId": "divine-book-tres-estudiosos",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-6",
+      "materials": [
+        {
+          "itemId": "material-pergaminho-dos-deuses",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-gelo-estrangeiro-1",
+      "resultItemId": "divine-book-gelo-estrangeiro",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-agua-gentil",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-uivo-do-mar",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-fonte-do-deserto",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-hades-do-norte-1",
+      "resultItemId": "divine-book-hades-do-norte",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-uivo-do-mar",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-risada-da-loucura",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-partindo-os-ceus-e-a-terra",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-lagrima-vermelha-1",
+      "resultItemId": "divine-book-lagrima-vermelha",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-risada-da-loucura",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-bencaos-da-terra",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-os-quatro-grande-elementos",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-agua-que-perfura-a-pedra-1",
+      "resultItemId": "divine-book-agua-que-perfura-a-pedra",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-agua-gentil",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-risada-da-loucura",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-os-quatro-grande-elementos",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-vento-da-manha-1",
+      "resultItemId": "divine-book-vento-da-manha",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-partindo-os-ceus-e-a-terra",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-fonte-do-deserto",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-floresta-vasta",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-passar-rio-com-palha-1",
+      "resultItemId": "divine-book-passar-rio-com-palha",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-partindo-os-ceus-e-a-terra",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-cidade-estrangeira",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-beleza-da-serpente",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-segurar-a-onda-1",
+      "resultItemId": "divine-book-segurar-a-onda",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-beleza-da-serpente",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-arrogancia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-disfarce-de-sangue",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-coracao-furioso-1",
+      "resultItemId": "divine-book-coracao-furioso",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-cidade-estrangeira",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-os-quatro-grande-elementos",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-disfarce-de-sangue",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-ritmo-das-ondas-1",
+      "resultItemId": "divine-book-ritmo-das-ondas",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-agua-gentil",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-partindo-os-ceus-e-a-terra",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-fragrancia-dos-ceus",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-tres-flores-1",
+      "resultItemId": "divine-book-tres-flores",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-agua-gentil",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-cidade-estrangeira",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-fragrancia-dos-ceus",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-asa-unificadora-1",
+      "resultItemId": "divine-book-asa-unificadora",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-partindo-os-ceus-e-a-terra",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-fonte-do-deserto",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-jupiter",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-zen-de-esquecimento-1",
+      "resultItemId": "divine-book-zen-de-esquecimento",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-risada-da-loucura",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-jupiter",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-arrogancia",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-mudanca-do-ceu-e-da-terra-1",
+      "resultItemId": "divine-book-mudanca-do-ceu-e-da-terra",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-beleza-da-serpente",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-arrogancia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-disfarce-de-sangue",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-sorriso-da-rainha-1",
+      "resultItemId": "divine-book-sorriso-da-rainha",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-floresta-vasta",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-arrogancia",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-disfarce-de-sangue",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-dezoito-estudiosos-1",
+      "resultItemId": "divine-book-dezoito-estudiosos",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-agua-gentil",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-beleza-da-serpente",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-os-treze-guardioes",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "recipe-divine-books-tab-7-pan-gu-1",
+      "resultItemId": "divine-book-pan-gu",
+      "resultQuantity": 1,
+      "sourceTabId": "divine-books-tab-7",
+      "materials": [
+        {
+          "itemId": "divine-book-disfarce-de-sangue",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-os-treze-guardioes",
+          "quantity": 1
+        },
+        {
+          "itemId": "divine-book-espelho-do-nada",
+          "quantity": 1
+        }
+      ]
+    }
+  ],
+  "aliases": {
+    "Espinho de Rosa": "divine-book-espinhos-de-rosa",
+    "Fonte do deserto": "divine-book-fonte-do-deserto",
+    "Risada de Loucura": "divine-book-risada-da-loucura",
+    "Frangância dos Céus": "divine-book-fragrancia-dos-ceus"
+  }
+}
